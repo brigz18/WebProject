@@ -4,11 +4,12 @@
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
 }
+
 body {
     background: #FF4500;
     color: #fff;
-    border-radius: 8px;
 }
+
 #header {
     width: 100%;
     height: 100vh;
@@ -16,55 +17,68 @@ body {
     background-repeat: no-repeat;
     background-size: contain;
     background-position: top left;
-    border-radius: 8px;
+    position: relative;
 }
+
 .container {
     padding: 10px 10%;
 }
+
 nav {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
     padding-top: 20px;
 }
+
 .nav-content {
     display: flex;
     align-items: center;
     gap: 30px;
+    flex-wrap: wrap;
 }
+
 .logo {
     width: 50px;
     height: 50px;
     object-fit: cover;
     border-radius: 50%;
 }
+
 nav ul {
     list-style: none;
     display: flex;
     gap: 20px;
 }
+
 nav ul li a {
     text-decoration: none;
     color: white;
-    font-size: 25px;
+    font-size: 18px;
     font-weight: 500;
     transition: 0.3s;
 }
+
 nav ul li a:hover {
     color: #0077cc;
 }
+
 .intro-text {
     margin-top: 300px;
     text-align: right;
     padding-right: 30px;
 }
+
 .intro-text h1 {
     font-size: 40px;
     margin-bottom: 50px;
 }
+
 .intro-text h1 span {
     color: #080808;
 }
+
 .intro-text p {
     font-size: 13px;
     color: #ccc;
@@ -73,51 +87,60 @@ nav ul li a:hover {
     display: inline-block;
     text-align: right;
 }
+
 section.about {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
-    padding: 6rem;
-    margin: 6rem;
+    padding: 6rem 2rem;
+    margin: 6rem 2rem;
     background: #fff;
     border-radius: 8px;
     gap: 2rem;
+    flex-wrap: wrap;
 }
+
 .about-text {
-    flex: 1;
+    flex: 1 1 300px;
 }
+
 .about-image {
-    flex: 1;
-    margin-top: -200px;
+    flex: 1 1 300px;
 }
+
 .about-image img {
     width: 100%;
     height: auto;
     border-radius: 8px;
     object-fit: cover;
 }
+
 h2 {
     color: #333;
 }
+
 p {
     color: #555;
     line-height: 1.6;
 }
+
 .tab-titles {
     display: flex;
-    gap: 70px;
+    gap: 30px;
     margin: 20px 0;
     flex-wrap: wrap;
 }
+
 .tab-links {
     display: inline-block;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 500;
     cursor: pointer;
     text-decoration: none;
     color: #FF4500;
     position: relative;
 }
+
 .tab-links::after {
     content: '';
     width: 0;
@@ -128,25 +151,29 @@ p {
     bottom: -8px;
     transition: 0.3s;
 }
+
 .tab-links.active-link::after {
     width: 50%;
 }
+
 .tab-links:hover {
     color: #0077cc;
 }
+
 .tab-contents {
     display: none;
-    font-size: 18px;
 }
+
 .tab-contents.active-tab {
     display: block;
-    font-size: 14px;
 }
+
 .tab-contents ul li {
     list-style: none;
     margin: 10px 0;
     color: #080808;
 }
+
 #backButton {
     position: fixed;
     top: 20px;
@@ -162,71 +189,76 @@ p {
     transition: background-color 0.3s;
     z-index: 9999;
 }
+
 #backButton:hover {
     background-color: #cc3700;
 }
+
 section {
-    padding: 6rem;
-    margin: 6rem;
+    padding: 6rem 2rem;
+    margin: 6rem 2rem;
     background: #fff;
     border-radius: 8px;
 }
-h2 {
-    color: #333;
-}
+
 ul {
     list-style: none;
     padding: 0;
 }
+
 a {
     color: #0077cc;
 }
+
 footer {
     text-align: center;
     padding: 1rem;
     background: #222;
     color: #fff;
 }
+
 .project {
-    margin-bottom: 3rem;
-    padding: 3rem;
+    margin-bottom: 6rem;
+    padding: 6rem 2rem;
     background: #fff;
     border: 1px solid #0077cc;
     border-radius: 10px;
 }
+
 .project a {
     color: #0077cc;
     text-decoration: none;
     font-weight: bold;
 }
+
 .project a:hover {
     text-decoration: underline;
 }
-section.skills ul li {
-    color: #333;
-    font-size: 18px;
-    margin-bottom: 10px;
-    list-style-type: disc;
-    margin-left: 20px;
-}
+
+/* Skills Section Flex Layout */
 .skills-content {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 2rem;
+    flex-wrap: wrap;
 }
+
 .skills-image {
-    flex: 1;
+    flex: 1 1 300px;
 }
+
 .skills-image img {
-    width: 105%;
+    width: 100%;
     height: auto;
     border-radius: 8px;
     object-fit: cover;
 }
+
 .skills-text {
-    flex: 1;
+    flex: 1 1 300px;
 }
+
 .skills-text ul li {
     color: #333;
     font-size: 18px;
@@ -234,312 +266,49 @@ section.skills ul li {
     list-style-type: disc;
     margin-left: 20px;
 }
+
+/* Responsive for small devices */
 @media (max-width: 768px) {
-    section, .container {
-      padding: 2rem;
-      margin: 2rem;
-    }
-    nav {
-      flex-direction: column;
-      align-items: flex-start;
-    }
     nav ul {
-      flex-direction: column;
-      gap: 10px;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
     }
-    .intro-text {
-      margin-top: 150px;
-      text-align: center;
-      padding-right: 0;
-    }
-    .intro-text h1 {
-      font-size: 30px;
-    }
-    .intro-text p {
-      font-size: 14px;
-    }
-    section.about {
-      flex-direction: column;
-      padding: 2rem;
-      margin: 2rem;
-      gap: 1rem;
-    }
-    .about-image, .about-text {
-      flex: 1;
-      width: 100%;
-    }
-    .about-image img {
-      width: 100%;
-      height: auto;
-    }
-    .skills-content {
-      flex-direction: column;
-      padding: 2rem;
-      margin: 2rem;
-    }
-    .skills-image img {
-      width: 100%;
-      height: auto;
-    }
-    .project {
-      padding: 2rem;
-      margin-bottom: 2rem;
-    }
-    footer {
-      font-size: 14px;
-    }
-    #backButton {
-      font-size: 16px;
-      padding: 8px 16px;
-    }
-}
-/* ===== Responsive Design (Fixed) ===== */
-@media (max-width: 768px) {
-    /* General container spacing */
-    section, .container {
-      padding: 1rem;
-      margin: 1rem;
-    }
-  
-    /* Navbar fix */
-    nav {
-      flex-direction: column;
-      align-items: center;
-      padding: 1rem;
-    }
-  
+
     .nav-content {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 1rem;
+        flex-direction: column;
+        gap: 20px;
     }
-  
-    .nav-content img {
-      width: 120px;
-      height: auto;
-    }
-  
-    nav ul {
-      flex-direction: column;
-      align-items: center;
-      gap: 10px;
-      padding: 0;
-      margin: 0;
-    }
-  
-    nav ul li {
-      margin: 0;
-    }
-  
-    /* Intro Text (Landing Section) */
+
     .intro-text {
-      margin-top: 120px;
-      text-align: center;
-      padding-right: 0;
+        margin-top: 150px;
+        text-align: center;
+        padding-right: 0;
     }
-  
-    .intro-text h1 {
-      font-size: 28px;
-    }
-  
-    .intro-text p {
-      font-size: 14px;
-    }
-  
-    /* About Section Fix */
+
     section.about {
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      padding: 2rem 1rem;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
-  
-    .about-image, .about-text {
-      width: 100%;
+
+    .about-text, .about-image {
+        flex: 1 1 100%;
     }
-  
-    .about-image img {
-      width: 100%;
-      max-width: 300px;
-      height: auto;
-      margin-bottom: 1rem;
-    }
-  
-    .about-text {
-      font-size: 16px;
-      padding: 0 1rem;
-    }
-  
-    /* Skills Section */
+
     .skills-content {
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      padding: 2rem 1rem;
+        flex-direction: column;
     }
-  
-    .skills-image img {
-      width: 100%;
-      max-width: 300px;
-      height: auto;
-      margin-bottom: 1rem;
+
+    .skills-text, .skills-image {
+        flex: 1 1 100%;
     }
-  
-    /* Project Section */
-    .project {
-      padding: 1rem;
-      margin-bottom: 1.5rem;
+
+    .tab-titles {
+        justify-content: center;
     }
-  
-    /* Footer */
-    footer {
-      font-size: 14px;
-      text-align: center;
+
+    .tab-contents ul li {
+        text-align: center;
     }
-  
-    /* Back Button smaller */
-    #backButton {
-      font-size: 16px;
-      padding: 8px 16px;
-    }
-  }
-/* ===== Responsive Design (Updated for your needs) ===== */
-@media (max-width: 768px) {
-  /* General spacing */
-  section, .container {
-    padding: 1rem;
-    margin: 1rem;
-  }
-
-  /* Navbar */
-  nav {
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem;
-  }
-
-  .nav-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-  }
-
-  .nav-content img {
-    width: 120px;
-    height: auto;
-  }
-
-  nav ul {
-    display: flex;
-    flex-direction: row; /* <-- Keep it horizontal */
-    justify-content: center;
-    gap: 15px;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-  }
-
-  nav ul li {
-    margin: 0;
-  }
-
-  nav ul li a {
-    font-size: 16px;
-    padding: 8px 12px;
-    text-decoration: none;
-  }
-
-  /* Intro text */
-  .intro-text {
-    margin-top: 120px;
-    text-align: center;
-    padding-right: 0;
-  }
-
-  .intro-text h1 {
-    font-size: 28px;
-  }
-
-  .intro-text p {
-    font-size: 14px;
-  }
-
-  /* About Section */
-  section.about {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 2rem 1rem;
-  }
-
-  .about-image, .about-text {
-    width: 100%;
-  }
-
-  .about-image img {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
-    margin-bottom: 1rem;
-  }
-
-  .about-text {
-    font-size: 16px;
-    padding: 0 1rem;
-  }
-
-  /* Educational, Experience, Others */
-  .about-text .educational,
-  .about-text .experience,
-  .about-text .others {
-    margin-bottom: 1.5rem;
-    text-align: left;
-  }
-
-  .about-text h2, .about-text h3 {
-    font-size: 20px;
-    margin-bottom: 10px;
-  }
-
-  .about-text p, .about-text li {
-    font-size: 14px;
-    line-height: 1.6;
-  }
-
-  /* Skills Section */
-  .skills-content {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 2rem 1rem;
-  }
-
-  .skills-image img {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
-    margin-bottom: 1rem;
-  }
-
-  /* Project Section */
-  .project {
-    padding: 1rem;
-    margin-bottom: 1.5rem;
-  }
-
-  /* Footer */
-  footer {
-    font-size: 14px;
-    text-align: center;
-  }
-
-  /* Back Button smaller */
-  #backButton {
-    font-size: 16px;
-    padding: 8px 16px;
-  }
 }
-  
