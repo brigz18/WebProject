@@ -275,6 +275,10 @@ footer {
         align-items: center;
     }
 
+    nav ul li a {
+        font-size: 20px; /* Made nav links bigger for mobile */
+    }
+
     .nav-content {
         flex-direction: column;
         gap: 20px;
@@ -290,6 +294,11 @@ footer {
         flex-direction: column;
         align-items: center;
         text-align: center;
+    }
+
+    .about-image {
+        order: -1; /* Move image on top of text */
+        margin-bottom: 20px;
     }
 
     .about-text, .about-image {
@@ -308,7 +317,12 @@ footer {
         justify-content: center;
     }
 
+    .tab-titles .tab-links {
+        font-size: 20px; /* Bigger tabs for mobile */
+    }
+
     .tab-contents ul li {
         text-align: center;
+        font-size: 18px; /* Make tab content text bigger */
     }
 }
