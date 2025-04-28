@@ -1,0 +1,239 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+body {
+    background: #FF4500;
+    color: #fff;
+    border-radius: 8px;
+}
+#header {
+    width: 100%;
+    height: 100vh;
+    background-image: url(portpic.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top left;
+    border-radius: 8px;
+}
+.container {
+    padding: 10px 10%;
+}
+nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-top: 20px;
+}
+.nav-content {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.logo {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+nav ul li a:hover {
+    color: #0077cc;
+}
+.intro-text {
+    margin-top: 300px;
+    text-align: right;
+    padding-right: 30px;
+}
+.intro-text h1 {
+    font-size: 40px;
+    margin-bottom: 50px;
+}
+.intro-text h1 span {
+    color: #080808;
+}
+.intro-text p {
+    font-size: 13px;
+    color: #ccc;
+    max-width: 650px;
+    margin-top: 0;
+    display: inline-block;
+    text-align: right;
+}
+section.about {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6rem;
+    margin: 6rem;
+    background: #fff;
+    border-radius: 8px;
+    gap: 2rem;
+}
+.about-text {
+    flex: 1;
+}
+.about-image {
+    flex: 1;
+    margin-top: -200px;  /* Adjust this value to raise the image */
+}
+.about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+h2 {
+    color: #333;
+}
+p {
+    color: #555;
+    line-height: 1.6;
+}
+.tab-titles {
+    display: flex;
+    gap: 70px;
+    margin: 20px 0;
+    flex-wrap: wrap;
+}
+.tab-links {
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+    color: #FF4500;
+    position: relative;
+}
+.tab-links::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #0077cc;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.3s;
+}
+.tab-links.active-link::after {
+    width: 50%;
+}
+.tab-links:hover {
+    color: #0077cc;
+}
+.tab-contents {
+    display: none;
+}
+.tab-contents.active-tab {
+    display: block;
+}
+.tab-contents ul li {
+    list-style: none;
+    margin: 10px 0;
+    color: #080808;
+}
+#backButton {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #FF4500;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0,0,0,0.2);
+    transition: background-color 0.3s;
+    z-index: 9999;
+}
+#backButton:hover {
+    background-color: #cc3700;
+}
+section {
+    padding: 6rem;
+    margin: 6rem;
+    background: #fff;
+    border-radius: 8px;
+}
+h2 {
+    color: #333;
+}
+ul {
+    list-style: none;
+    padding: 0;
+}
+a {
+    color: #0077cc;
+}
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #222;
+    color: #fff;
+}
+.project {
+    margin-bottom: 3rem;
+    padding: 3rem;
+    background: #fff;
+    border: 1px solid #0077cc;
+    border-radius: 10px;
+}
+.project a {
+    color: #0077cc;
+    text-decoration: none;
+    font-weight: bold;
+}
+.project a:hover {
+    text-decoration: underline;
+}
+section.skills ul li {
+    color: #333; /* darker text for visibility */
+    font-size: 18px;
+    margin-bottom: 10px;
+    list-style-type: disc;
+    margin-left: 20px;
+}
+/* Skills Section Flex Layout */
+.skills-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.skills-image {
+    flex: 1;
+}
+
+.skills-image img {
+    width: 105%;  /* Increased the size of the image */
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.skills-text {
+    flex: 1;
+}
+
+.skills-text ul li {
+    color: #333;
+    font-size: 18px;
+    margin-bottom: 10px;
+    list-style-type: disc;
+    margin-left: 20px;
+}

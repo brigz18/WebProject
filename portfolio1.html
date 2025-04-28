@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="design1portF.css">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <button id="backButton">← Back</button>
+
+    <div id="header">
+        <div class="container">
+            <nav>
+                <div class="nav-content">
+                    <img src="logoport.jpg" class="logo" alt="Logo">
+                    <ul>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="intro-text">
+                <h1>Hello, I'm <span>ROI ANDREY BRINGINO</span></h1>
+                <p>Motivated and eager to learn about the field with a strong foundation to work properly and being hardworking.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section class="about" id="about" data-aos="fade-right">
+        <div class="about-text">
+            <h2>About Me</h2><br>
+            <p>I am a Bachelor of Science in Information Technology graduated from Quezon City, Philippines. I have a strong passion for analytical thinking and problem-solving, which drives me to understand how systems work and find efficient solutions to real-world challenges. As a detail-oriented and tech-savvy individual, I enjoy learning new technologies and applying my knowledge through hands-on projects. My background in IT has equipped me with skills in programming, web development, system design and database management. I’m eager to start my professional journey, contribute to innovative teams, and continuously grow in the ever-evolving field of technology. During my academic journey, I gained hands-on experience through various school projects and internships, where I developed problem-solving skills and a passion for learning new technologies. I am eager to contribute to a dynamic team, grow professionally, and apply my skills to real-world challenges in the IT industry.</p>
+
+            <div class="tab-titles">
+                <a href="#" class="tab-links active-link" onclick="opentab('education', event)">Educational</a>
+                <a href="#" class="tab-links" onclick="opentab('experience', event)">Experience</a>
+                <a href="#" class="tab-links" onclick="opentab('other', event)">Other</a>
+            </div><br>
+
+            <div class="tab-contents active-tab" id="education">
+                <ul>
+                    <li>San Diego Elementary School - 2016 Elementary Graduated</li>
+                    <li>Batasan Hills National High School - 2020 High School Graduated</li>
+                    <li>Mary the Queen College of Quezon City - 2022 Senior High School Graduated</li>
+                    <li>Mary the Queen College of Quezon City - 2027 College Graduated</li>
+                </ul>
+            </div>
+
+            <div class="tab-contents" id="experience">
+                <ul>
+                    <li>Capstone Project</li>
+                </ul>
+            </div>
+
+            <div class="tab-contents" id="other">
+                <ul>
+                    <li>TESDA / Mindbank Training and Skills Corp. - Computer System Servicing NCII</li>
+                    <li>Basic Animation Creator (YouTube)</li>
+                    <li>Freelance Web Designer Projects</li>
+                </ul>
+            </div>
+        </div>
+        <div class="about-image">
+            <img src="r.jpg" alt="About Me Image">
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills" id="skills" data-aos="fade-left">
+        <div class="skills-content">
+            <div class="skills-image">
+                <img src="skills.jpg" alt="Skills Image">
+            </div>
+            <div class="skills-text">
+                <h2>Skills</h2><br>
+                <ul>
+                    <li>Web Surfing</li>
+                    <li>Customer Service</li>
+                    <li>Office 365 management</li>
+                    <li>Software-Hardware Troubleshooting</li>
+                    <li>HTML/CSS</li>
+                    <li>JavaScript</li>
+                    <li>Python</li>
+                    <li>Java</li>
+                </ul><br>
+                <h2>Core Strengths</h2><br>
+                <ul>
+                    <li>Observant</li>
+                    <li>Rapid Grasping Prodigy</li>
+                    <li>Punctual</li>
+                    <li>Diligent</li>
+                    <li>Consistent</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects" data-aos="fade-right">
+        <h2>Projects</h2><br>
+        <div class="project">
+            <p>A personal website made using HTML, CSS and JS. <a href="http://127.0.0.1:5500/portfolio1.html#">View Project</a></p>
+        </div>
+        <div class="project">
+            <p>A simple Web Valentine's message for my friend Joy. <a href="http://127.0.0.1:5501/from%20your%20friend%20Roi.htm" target="_blank">View Project</a></p>
+        </div>
+        <div class="project">
+            <p>A system developed using Java and MySQL. <a href="https://github.com/yourusername/student-management-system" target="_blank">View Project</a></p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact" data-aos="fade-left">
+        <h2>Contact Me</h2><br>
+        <p>No#: 09851098163</p>
+        <p>FB: <a href="https://www.facebook.com/rbringino" target="_blank">Roi Andrey G. Bringino</a></p>
+        <p>Email: <a href="mailto:bringinoroiandrey1@gmail.com">bringinoroiandrey1@gmail.com</a></p>
+        <p>GitHub: <a href="https://github.com/brigz18" target="_blank">brigz18</a></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Dev.Roi</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname, event) {
+            event.preventDefault();
+            for (let tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (let tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+        document.getElementById('backButton').addEventListener('click', function() {
+            window.history.back();
+        });
+        document.getElementById('backButton').addEventListener('click', function() {
+    // Scroll to the intro-text section
+    document.querySelector('.logo').scrollIntoView({ behavior: 'smooth' });
+});
+
+    </script>
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1200,
+        once: false,
+      });
+    </script>
+
+</body>
+</html>
