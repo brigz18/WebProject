@@ -334,53 +334,63 @@ footer {
   }
 }
 
-@media screen and (max-width: 480px) {
-  /* Adjust header to let the background image display first */
+@media only screen and (max-width: 480px) {
   #header {
-    height: auto;
-    background-size: 100% auto;
-    background-position: top center;
-    padding-bottom: 1px; /* push text down below image */
-    position: relative;
+    background-size: cover; /* Ensures the background image covers the entire header */
+    background-position: center;
+  }
+
+  .container {
+    padding: 10px;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 10px;
+  }
+
+  .nav-content {
+    width: 100%;
+    justify-content: space-between;
+    padding: 0 10px;
+  }
+
+  .logo {
+    width: 40px;
+    height: 40px;
+  }
+
+  nav ul {
+    display: block;
+    text-align: left;
+    margin-top: 20px;
+  }
+
+  nav ul li {
+    margin-bottom: 10px;
+  }
+
+  nav ul li a {
+    font-size: 20px;
   }
 
   .intro-text {
-    margin-top: 1000;
-    padding: 20px 15px 0;
-    text-align: center;
-    position: relative;
-    z-index: 1;
+    margin-top: 150px;
+    text-align: left;
+    padding-right: 0;
+    padding-left: 10px;
   }
 
   .intro-text h1 {
-    font-size: 20px;
-    margin-top: 1000;
-  }
-
-  .intro-text h1 span {
-    color: #fff;
+    font-size: 30px;
+    margin-bottom: 20px;
   }
 
   .intro-text p {
-    font-size: 11px;
-    margin-top: 2px;
+    font-size: 14px;
+    text-align: left;
   }
-
- nav ul {
-    display: flex; /* Use flexbox */
-    gap: 8px; /* Space between items */
-    padding-left: 0;
-    flex-direction: row; /* Align items horizontally */
-    align-items: top left; /* Center items vertically if needed */
-}
-
-nav ul li a {
-    color: #fff;
-    display: block; /* Make links block-level to allow padding */
-    padding: 8px;
-    text-align: top left; /* Optional: center text inside links */
-}
-
 }
 
 
