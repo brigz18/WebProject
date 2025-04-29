@@ -274,7 +274,7 @@ footer {
   }
 
   .nav-content li a {
-      font-size: 20px;
+      font-size: 25px;
     color: #fff;/* Bigger font size */
   }
 
@@ -283,6 +283,18 @@ footer {
       text-align: center;
       padding-right: 0;
   }
+  .intro-text h1 {
+    font-size: 24px; /* even smaller for tiny phones */
+    margin-bottom: 20px;
+  }
+  .intro-text p {
+  font-size: 16px; /* bigger for readability */
+  color: #ccc;
+  max-width: 90%; /* more flexible width */
+  margin: 0 auto; /* center it */
+  display: block; /* better than inline-block for text */
+  text-align: center; /* center is friendlier on mobile */
+}
 
   section.about {
       flex-direction: column;
