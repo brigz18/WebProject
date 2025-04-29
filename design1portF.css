@@ -362,7 +362,7 @@ footer {
 
   .intro-text p {
     font-size: 11px;
-    margin-top: 8px;
+    margin-top: 12px;
   }
 
   nav ul {
@@ -373,9 +373,10 @@ footer {
   }
 
   nav ul li a {
-    color: #080808;
+    color: #fff;
     display: block;
     padding: 8px;
+    align-items: row;
   }
 }
 
