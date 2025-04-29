@@ -262,60 +262,66 @@ footer {
   list-style-type: disc;
   margin-left: 20px;
 }
-/* ✅ Maintain Desktop Layout on Mobile — Only Scale Fonts, Images, Spacing */
 
-@media screen and (max-width: 768px) {
+@media only screen and (max-width: 768px) {
   #header {
-    height: auto;
-    background-size: 100% auto;
-    background-position: top center;
-    padding-bottom: 300px; /* space for image height */
-    position: relative;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
   }
 
-  .intro-text {
-    margin-top: 0;
-    padding-top: 20px;
-    text-align: center;
-    position: relative;
-    z-index: 1;
+  .container {
+    padding: 15px 7%;
   }
 
-  .intro-text h1 {
-    font-size: 22px;
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
   }
 
-  .intro-text h1 span {
-    color: #fff;
-  }
-
-  .intro-text p {
-    font-size: 12px;
-    margin-top: 10px;
+  .nav-content {
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
   }
 
   nav ul {
     flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    padding-left: 0;
+    gap: 15px;
+    align-items: flex-start;
   }
 
   nav ul li a {
-    color: #080808;
-    display: block;
-    padding: 8px;
+    font-size: 22px;
   }
-}
 
   .logo {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
   }
 
-  .skills-text ul li,
-  .tab-contents ul li {
-    font-size: 14px;
+  .intro-text {
+    margin-top: 600px;
+    text-align: center;
+    padding: 0 30px;
+  }
+
+  .intro-text h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+
+  .intro-text p {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .about-container {
+    flex-direction: column;
+  }
+
+  .about-image {
+    order: -1; /* Show image first */
   }
 
   .project {
@@ -326,89 +332,6 @@ footer {
     font-size: 16px;
   }
 
-  #backButton {
-    font-size: 14px;
-    padding: 8px 12px;
-  }
-
-  .skills-image img,
-  .about-image img {
-    width: 100%;
-    height: auto;
-  }
-}
-
-@media only screen and (max-width: 480px) {
-  #header {
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-  }
-
-  .container {
-    padding: 10px 5%;
-  }
-
-  nav {
-    flex-direction: row;
-    align-items: top left;
-  }
-
-  .nav-content {
-    flex-direction: column;
-    gap: 10px;
-    align-items: top left;
-  }
-
-  nav ul {
-    flex-direction: column;
-    gap: 10px;
-    align-items: top left;
-  }
-
-  nav ul li a {
-    font-size: 20px;
-  }
-
-  .logo {
-    width: 40px;
-    height: 40px;
-  }
-
-  .intro-text {
-    margin-top: 800px;
-    text-align: center;
-    padding: 0 20px;
-  }
-
-  .intro-text h1 {
-    font-size: 28px;
-    margin-bottom: 5px;
-  }
-
-  .intro-text p {
-    font-size: 14px;
-    text-align: center;
-  }
-}
-
-
-  .about-container {
-    flex-direction: column;
-  }
-
-  .about-image {
-    order: -1; /* show image first */
-  }
-
-  .project {
-    padding: 1.5rem;
-  }
-
-  .tab-links {
-    font-size: 14px;
-  }
-}
   .container,
   section,
   .intro-text,
@@ -416,8 +339,10 @@ footer {
   .about,
   .projects,
   .contact {
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
     margin-left: 0;
     margin-right: 0;
   }
+}
+
