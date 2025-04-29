@@ -330,3 +330,42 @@ footer {
       font-size: 18px; /* Bigger tab content */
   }
 }
+/* Default (for PC, Laptop) */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 5%;
+}
+
+.nav-content {
+  display: flex;
+  gap: 40px;
+}
+
+.nav-content li {
+  list-style: none;
+}
+
+.nav-content li a {
+  text-decoration: none;
+  color: #000;
+  font-size: 18px;
+  font-weight: 500;
+}
+  .nav-content {
+    display: flex;
+    flex-direction: row; /* Stay horizontal */
+    gap: 20px; /* smaller gap */
+  }
+
+  .nav-content li a {
+    font-size: 16px; /* Slightly smaller text */
+  }
+
+  .logo {
+    width: 120px; /* Resize logo smaller */
+    height: auto;
+  }
+}
+
