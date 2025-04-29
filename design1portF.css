@@ -324,19 +324,18 @@ footer {
   color: 080808;
   }
   .intro-text {
-    margin-top: 150px; /* reduce top margin for smaller screens */
-    padding-right: 15px; /* reduce padding for better fit */
-    padding-left: 15px;  /* optional for balanced padding */
+    margin-top: 300px;
+    padding-left: 15px;
   }
   .intro-text h1 {
     font-size: 22px;
   }
   .intro-text h1 span {
-  color: #080808;
+  color: #fff;
   }
 
   .intro-text p {
-    font-size: 11px;
+    font-size: 9px;
   }
 
   .project {
