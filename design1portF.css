@@ -350,11 +350,6 @@ footer {
     margin-right: 0;
   }
 .intro-text {
-    margin-top: 100px; /* Reduce from 300px to 100px */
-    text-align: center;
-    padding-right: 0;
-
-.intro-text {
     margin-top: 150px !important;
     text-align: right;
     padding-right: 30px;
