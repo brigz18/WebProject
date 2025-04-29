@@ -261,26 +261,48 @@ footer {
 /* ✅ Maintain Desktop Layout on Mobile — Only Scale Fonts, Images, Spacing */
 
 @media screen and (max-width: 768px) {
-  body {
-    font-size: 14px;
-  }
-
-  nav ul li a {
-    font-size: 18px;
+  #header {
+    height: auto;
+    background-size: 100% auto;
+    background-position: top center;
+    padding-bottom: 300px; /* space for image height */
+    position: relative;
   }
 
   .intro-text {
-    margin-top: 200px;
-    padding-right: 10px;
+    margin-top: 0;
+    padding-top: 20px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
   }
 
   .intro-text h1 {
-    font-size: 28px;
+    font-size: 22px;
+  }
+
+  .intro-text h1 span {
+    color: #fff;
   }
 
   .intro-text p {
     font-size: 12px;
+    margin-top: 10px;
   }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding-left: 0;
+  }
+
+  nav ul li a {
+    color: #080808;
+    display: block;
+    padding: 8px;
+  }
+}
 
   .logo {
     width: 40px;
@@ -313,33 +335,25 @@ footer {
 }
 
 @media screen and (max-width: 480px) {
-  body {
-    font-size: 12px;
-  }
-
-  nav ul {
-    gap: 10px;
-    padding-left: 0;
-    flex-direction: column; /* optional: make menu vertical */
-    align-items: center;    /* center the items */
-  }
-
-  nav ul li a {
-    color: #080808; /* ✅ fix: missing # for color */
-    display: block;
-    padding: 8px;
+  /* Adjust header to let the background image display first */
+  #header {
+    height: auto;
+    background-size: 100% auto;
+    background-position: top center;
+    padding-bottom: 250px; /* push text down below image */
+    position: relative;
   }
 
   .intro-text {
-    margin-top: 0; /* ✅ let’s remove the big top margin */
+    margin-top: 0;
     padding: 20px 15px 0;
     text-align: center;
-    position: relative; /* make sure it doesn't overlap */
+    position: relative;
     z-index: 1;
   }
 
   .intro-text h1 {
-    font-size: 22px;
+    font-size: 20px;
   }
 
   .intro-text h1 span {
@@ -347,10 +361,24 @@ footer {
   }
 
   .intro-text p {
-    font-size: 12px; /* ✅ increase from 8px to improve readability */
-    margin-top: 10px;
+    font-size: 11px;
+    margin-top: 8px;
+  }
+
+  nav ul {
+    gap: 10px;
+    padding-left: 0;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li a {
+    color: #080808;
+    display: block;
+    padding: 8px;
   }
 }
+
 
   .about-container {
     flex-direction: column;
