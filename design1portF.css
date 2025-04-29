@@ -349,16 +349,3 @@ footer {
     margin-left: 0;
     margin-right: 0;
   }
-.intro-text {
-    margin-top: 150px !important;
-    text-align: right;
-    padding-right: 30px;
-  }
-
-  .about {
-    flex-direction: column-reverse; /* return image below text */
-    align-items: center;
-    padding: 2rem 1rem;
-    margin: 2rem 1rem;
-  }
-
