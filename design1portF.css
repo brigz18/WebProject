@@ -227,22 +227,26 @@ footer {
     margin-bottom: 20px;
   }
 
-  .skills-content {
-    flex-direction: column;
-    align-items: center;
+   .skills-content {
+      flex-direction: column;
+      align-items: center;
   }
 
-  .intro-text {
-    margin-top: 0;
-    text-align: center;
-    padding: 20px;
-    position: absolute;
-    bottom: 30px;
-    left: 0;
-    right: 0;
+  .skills-text, .skills-image {
+      flex: 1 1 100%;
+      text-align: center;
   }
 
-  #header {
-    background-size: cover;
+  .tab-titles {
+      justify-content: center;
+  }
+
+  .tab-links {
+      font-size: 20px; /* Bigger tab titles */
+  }
+
+  .tab-contents ul li {
+      text-align: center;
+      font-size: 18px; /* Bigger tab content */
   }
 }
