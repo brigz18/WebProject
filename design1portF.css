@@ -320,9 +320,19 @@ footer {
   nav ul {
     gap: 10px;
   }
-
+  nav ul li a {
+  color: 080808;
+  }
+  .intro-text {
+    margin-top: 150px; /* reduce top margin for smaller screens */
+    padding-right: 15px; /* reduce padding for better fit */
+    padding-left: 15px;  /* optional for balanced padding */
+  }
   .intro-text h1 {
     font-size: 22px;
+  }
+  .intro-text h1 span {
+  color: #080808;
   }
 
   .intro-text p {
