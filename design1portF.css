@@ -300,7 +300,8 @@ body {
 }
 
 .container {
-  padding: 5px 3%; /* more breathing room */
+  padding: 5px 3%;
+  margin-top: -50px; /* more breathing room */
 }
 
   .nav-content {
@@ -336,6 +337,8 @@ body {
   display: block; /* better than inline-block for text */
   text-align: center; /* center is friendlier on mobile */
 }
+  #backButton {
+    display: none;
 
   section.about {
       flex-direction: column;
