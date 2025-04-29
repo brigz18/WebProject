@@ -370,14 +370,14 @@ footer {
     gap: 10px; /* Space between items */
     padding-left: 0;
     flex-direction: row; /* Align items horizontally */
-    align-items: center; /* Center items vertically if needed */
+    align-items: left; /* Center items vertically if needed */
 }
 
 nav ul li a {
     color: #fff;
     display: block; /* Make links block-level to allow padding */
     padding: 8px;
-    text-align: center; /* Optional: center text inside links */
+    text-align: left; /* Optional: center text inside links */
 }
 
 }
