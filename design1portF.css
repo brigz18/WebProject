@@ -26,40 +26,33 @@ body {
 
 nav {
   display: flex;
-  justify-content: space-between;
-  align-items: top right;
-  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
   padding-top: 20px;
 }
-
 .nav-content {
   display: flex;
-  align-items: top right;
+  align-items: center;
   gap: 30px;
-  flex-wrap: wrap;
 }
-
 .logo {
   width: 50px;
   height: 50px;
   object-fit: cover;
   border-radius: 50%;
 }
-
 nav ul {
   list-style: none;
   display: flex;
   gap: 20px;
 }
-
 nav ul li a {
   text-decoration: none;
   color: white;
-  font-size: 18px;
+  font-size: 25px;
   font-weight: 500;
   transition: 0.3s;
 }
-
 nav ul li a:hover {
   color: #0077cc;
 }
@@ -76,7 +69,7 @@ nav ul li a:hover {
 }
 
 .intro-text h1 span {
-  color: #fff;
+  color: #080808;
 }
 
 .intro-text p {
@@ -218,19 +211,17 @@ footer {
 }
 
 .project {
-  margin-bottom: 6rem;
-  padding: 6rem 2rem;
+  margin-bottom: 1.5rem;
+  padding: 3rem;
   background: #fff;
   border: 1px solid #0077cc;
   border-radius: 10px;
 }
-
 .project a {
   color: #0077cc;
   text-decoration: none;
   font-weight: bold;
 }
-
 .project a:hover {
   text-decoration: underline;
 }
@@ -328,44 +319,6 @@ footer {
   .tab-contents ul li {
       text-align: center;
       font-size: 18px; /* Bigger tab content */
-  }
-}
-/* Default (for PC, Laptop) */
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 5%;
-}
-
-.nav-content {
-  display: flex;
-  gap: 40px;
-}
-
-.nav-content li {
-  list-style: none;
-}
-
-.nav-content li a {
-  text-decoration: none;
-  color: #000;
-  font-size: 18px;
-  font-weight: 500;
-}
-  .nav-content {
-    display: flex;
-    flex-direction: row; /* Stay horizontal */
-    gap: 20px; /* smaller gap */
-  }
-
-  .nav-content li a {
-    font-size: 16px; /* Slightly smaller text */
-  }
-
-  .logo {
-    width: 120px; /* Resize logo smaller */
-    height: auto;
   }
 }
 
