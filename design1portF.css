@@ -354,3 +354,29 @@ footer {
     text-align: center;
     padding-right: 0;
 
+.intro-text {
+    margin-top: 150px !important;
+    text-align: right;
+    padding-right: 30px;
+  }
+
+  .about {
+    flex-direction: column-reverse; /* return image below text */
+    align-items: center;
+    padding: 2rem 1rem;
+    margin: 2rem 1rem;
+  }
+
+  .about-text,
+  .about-image {
+    flex: 1 1 100%;
+    width: 100%;
+  }
+
+  .about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+
