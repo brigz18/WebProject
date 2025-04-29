@@ -340,7 +340,7 @@ footer {
     height: auto;
     background-size: 100% auto;
     background-position: top center;
-    padding-bottom: 250px; /* push text down below image */
+    padding-bottom: 300px; /* push text down below image */
     position: relative;
   }
 
