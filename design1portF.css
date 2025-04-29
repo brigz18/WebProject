@@ -340,12 +340,12 @@ footer {
     height: auto;
     background-size: 100% auto;
     background-position: top center;
-    padding-bottom: 2px; /* push text down below image */
+    padding-bottom: 1px; /* push text down below image */
     position: relative;
   }
 
   .intro-text {
-    margin-top: 800;
+    margin-top: 1000;
     padding: 20px 15px 0;
     text-align: center;
     position: relative;
@@ -354,7 +354,7 @@ footer {
 
   .intro-text h1 {
     font-size: 20px;
-    margin-top: 800;
+    margin-top: 1000;
   }
 
   .intro-text h1 span {
