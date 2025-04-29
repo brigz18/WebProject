@@ -337,4 +337,17 @@ footer {
     font-size: 14px;
   }
 }
+  .container,
+  section,
+  .intro-text,
+  .skills-content,
+  .about,
+  .projects,
+  .contact {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
 
