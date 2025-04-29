@@ -335,7 +335,14 @@ footer {
   }
 
   .intro-text p {
-    font-size: 9px;
+    font-size: 8px;
+  }
+  .about-container {
+    flex-direction: column;
+  }
+
+  .about-image {
+    order: -1; /* show image first */
   }
 
   .project {
