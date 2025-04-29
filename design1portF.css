@@ -345,7 +345,7 @@ footer {
   }
 
   .intro-text {
-    margin-top: 50;
+    margin-top: 100;
     padding: 20px 15px 0;
     text-align: center;
     position: relative;
@@ -354,7 +354,7 @@ footer {
 
   .intro-text h1 {
     font-size: 20px;
-    margin-top: 50;
+    margin-top: 100;
   }
 
   .intro-text h1 span {
