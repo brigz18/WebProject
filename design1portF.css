@@ -280,7 +280,7 @@ footer {
 .intro-text {
     margin-top: auto; /* remove big top margin */
     position: absolute;
-    bottom: 20px; /* move it 20px above the bottom of the screen */
+    bottom: 50px; /* move it 20px above the bottom of the screen */
     left: 0;
     right: 0;
     text-align: center;
