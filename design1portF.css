@@ -345,7 +345,7 @@ footer {
   }
 
   .intro-text {
-    margin-top: 0;
+    margin-top: 50;
     padding: 20px 15px 0;
     text-align: center;
     position: relative;
@@ -362,7 +362,7 @@ footer {
 
   .intro-text p {
     font-size: 11px;
-    margin-top: 12px;
+    margin-top: 15px;
   }
 
  nav ul {
@@ -370,14 +370,14 @@ footer {
     gap: 10px; /* Space between items */
     padding-left: 0;
     flex-direction: row; /* Align items horizontally */
-    align-items: left; /* Center items vertically if needed */
+    align-items: top left; /* Center items vertically if needed */
 }
 
 nav ul li a {
     color: #fff;
     display: block; /* Make links block-level to allow padding */
     padding: 8px;
-    text-align: left; /* Optional: center text inside links */
+    text-align: top left; /* Optional: center text inside links */
 }
 
 }
