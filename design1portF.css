@@ -258,44 +258,83 @@ footer {
   list-style-type: disc;
   margin-left: 20px;
 }
-/* For mobile phones (480px and below) */
-@media (max-width: 480px) {
-  #header {
-    background-size: cover;
-    background-position: center;
-    height: 90vh;
-  }
+/* ✅ Maintain Desktop Layout on Mobile — Only Scale Fonts, Images, Spacing */
 
-  .intro-text {
-    margin-top: 100px;
-  }
-
-  .intro-text h1 {
-    font-size: 24px;
-  }
-
-  .intro-text p {
-    font-size: 12px;
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 14px;
   }
 
   nav ul li a {
     font-size: 18px;
   }
 
-  #backButton {
-    font-size: 14px;
-    padding: 8px 16px;
+  .intro-text {
+    margin-top: 200px;
+    padding-right: 10px;
   }
 
-  section.about,
-  section.skills,
-  section.projects,
-  section.contact {
-    margin: 2rem 1rem;
-    padding: 2rem 1rem;
+  .intro-text h1 {
+    font-size: 28px;
+  }
+
+  .intro-text p {
+    font-size: 12px;
+  }
+
+  .logo {
+    width: 40px;
+    height: 40px;
+  }
+
+  .skills-text ul li,
+  .tab-contents ul li {
+    font-size: 14px;
   }
 
   .project {
-    padding: 2rem 1rem;
+    padding: 2rem;
+  }
+
+  .tab-links {
+    font-size: 16px;
+  }
+
+  #backButton {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+
+  .skills-image img,
+  .about-image img {
+    width: 100%;
+    height: auto;
   }
 }
+
+@media screen and (max-width: 480px) {
+  body {
+    font-size: 12px;
+  }
+
+  nav ul {
+    gap: 10px;
+  }
+
+  .intro-text h1 {
+    font-size: 22px;
+  }
+
+  .intro-text p {
+    font-size: 11px;
+  }
+
+  .project {
+    padding: 1.5rem;
+  }
+
+  .tab-links {
+    font-size: 14px;
+  }
+}
+
