@@ -301,13 +301,13 @@ body {
 
 .container {
   padding: 5px 3%;
-  margin-top: -50px; /* more breathing room */
 }
 
   .nav-content {
       display: flex;
       flex-direction: row; /* Keep horizontal */
       gap: 20px;
+    margin-top: -50px;
   }
 
   .nav-content li a {
