@@ -277,11 +277,13 @@ footer {
       font-size: 25px;
     color: #fff;/* Bigger font size */
   }
-
-  .intro-text {
-      margin-top: 150px;
-      text-align: center;
-      padding-right: 0;
+.intro-text {
+    margin-top: auto; /* remove big top margin */
+    position: absolute;
+    bottom: 20px; /* move it 20px above the bottom of the screen */
+    left: 0;
+    right: 0;
+    text-align: center;
   }
   .intro-text h1 {
     font-size: 24px; /* even smaller for tiny phones */
