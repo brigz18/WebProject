@@ -269,19 +269,20 @@ footer {
 
 /* Responsive for small devices */
 @media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        gap: 10px;
+    nav {
+        flex-wrap: wrap;
+        justify-content: space-between;
         align-items: center;
+        padding: 10px 20px;
+    }
+
+    nav ul {
+        flex-direction: row; /* Stay horizontal */
+        gap: 15px;
     }
 
     nav ul li a {
-        font-size: 20px; /* Made nav links bigger for mobile */
-    }
-
-    .nav-content {
-        flex-direction: column;
-        gap: 20px;
+        font-size: 18px; /* Bigger font for nav links */
     }
 
     .intro-text {
@@ -297,7 +298,7 @@ footer {
     }
 
     .about-image {
-        order: -1; /* Move image on top of text */
+        order: -1; /* Move image on top */
         margin-bottom: 20px;
     }
 
@@ -307,10 +308,12 @@ footer {
 
     .skills-content {
         flex-direction: column;
+        align-items: center;
     }
 
     .skills-text, .skills-image {
         flex: 1 1 100%;
+        text-align: center;
     }
 
     .tab-titles {
@@ -318,11 +321,12 @@ footer {
     }
 
     .tab-titles .tab-links {
-        font-size: 20px; /* Bigger tabs for mobile */
+        font-size: 20px; /* Bigger tab titles */
     }
 
     .tab-contents ul li {
         text-align: center;
-        font-size: 18px; /* Make tab content text bigger */
+        font-size: 18px; /* Bigger tab content */
     }
 }
+
