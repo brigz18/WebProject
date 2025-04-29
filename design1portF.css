@@ -319,24 +319,39 @@ footer {
 
   nav ul {
     gap: 10px;
+    padding-left: 0;
+    flex-direction: column; /* optional: make menu vertical */
+    align-items: center;    /* center the items */
   }
+
   nav ul li a {
-  color: 080808;
+    color: #080808; /* ✅ fix: missing # for color */
+    display: block;
+    padding: 8px;
   }
+
   .intro-text {
-    margin-top: 150px;
-    padding-left: 15px;
+    margin-top: 0; /* ✅ let’s remove the big top margin */
+    padding: 20px 15px 0;
+    text-align: center;
+    position: relative; /* make sure it doesn't overlap */
+    z-index: 1;
   }
+
   .intro-text h1 {
     font-size: 22px;
   }
+
   .intro-text h1 span {
-  color: #fff;
+    color: #fff;
   }
 
   .intro-text p {
-    font-size: 8px;
+    font-size: 12px; /* ✅ increase from 8px to improve readability */
+    margin-top: 10px;
   }
+}
+
   .about-container {
     flex-direction: column;
   }
