@@ -102,68 +102,104 @@ footer {
     color: white;
 }
 
-/* Responsive Design */
+/* RESPONSIVE DESIGN FOR MOBILE AND TABLET */
+
+/* For tablets (768px and below) */
 @media (max-width: 768px) {
-    .about {
-        flex-direction: column;
-    }
+  nav {
+    justify-content: center;
+    padding-top: 10px;
+  }
+  
+  .nav-content {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .intro-text {
+    margin-top: 150px;
+    text-align: center;
+    padding-right: 0;
+  }
+
+  .intro-text h1 {
+    font-size: 30px;
+  }
+
+  .intro-text p {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  section.about,
+  section.skills,
+  section.projects,
+  section.contact {
+    margin: 2rem 1rem;
+    padding: 3rem 1rem;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .skills-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-text, .about-image, .skills-text, .skills-image {
+    flex: 1 1 100%;
+  }
+
+  .tab-titles {
+    justify-content: center;
+  }
 }
 
+/* For mobile phones (480px and below) */
 @media (max-width: 480px) {
-    body {
-        overflow-x: hidden; /* ✅ Prevents horizontal scroll on mobile */
-    }
+  #header {
+    background-size: cover;
+    background-position: center;
+    height: 90vh;
+  }
 
-    .nav-content {
-        display: flex;
-        justify-content: space-between; /* ✅ Keeps logo left, nav right */
-        align-items: center;
-        position: fixed; /* ✅ Stays at top */
-        top: 0;
-        left: 0;
-        width: 100%;
-        background: rgba(0, 0, 0, 0.8); /* Optional: makes it visible above image */
-        z-index: 1000;
-        padding: 10px;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.4);
-    }
+  .intro-text {
+    margin-top: 100px;
+  }
 
-    .nav-content img.logo {
-        width: 40px;
-        height: auto;
-        margin-left: 10px;
-    }
+  .intro-text h1 {
+    font-size: 24px;
+  }
 
-    nav ul {
-        display: flex;
-        gap: 10px;
-        margin-right: 10px;
-    }
+  .intro-text p {
+    font-size: 12px;
+  }
 
-    .hero {
-        padding-top: 60px; /* ✅ Adds space below fixed nav */
-    }
+  nav ul li a {
+    font-size: 18px;
+  }
 
-    .about {
-        flex-direction: column;
-        padding: 40px 20px;
-    }
+  #backButton {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
 
-    .about-image {
-        order: -1; /* ✅ Moves image above About Me text */
-        margin-bottom: 20px;
-        text-align: center;
-    }
+  section.about,
+  section.skills,
+  section.projects,
+  section.contact {
+    margin: 2rem 1rem;
+    padding: 2rem 1rem;
+  }
 
-    .about-image img {
-        width: 80%;
-        max-width: 250px;
-        height: auto;
-        border-radius: 50%;
-    }
-
-    .about-text {
-        text-align: center;
-    }
+  .project {
+    padding: 2rem 1rem;
+  }
 }
 
