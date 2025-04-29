@@ -297,7 +297,7 @@ body {
 }
 
 .container {
-  padding: 10px 5%; /* more breathing room */
+  padding: 8px 5%; /* more breathing room */
 }
 
   .nav-content {
@@ -322,6 +322,9 @@ body {
     font-size: 24px; /* even smaller for tiny phones */
     margin-bottom: 20px;
   }
+  .intro-text h1 span {
+  color: #fff;
+}
   .intro-text p {
   font-size: 16px; /* bigger for readability */
   color: #ccc;
