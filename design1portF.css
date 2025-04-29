@@ -270,19 +270,20 @@ footer {
 /* Responsive for small devices */
 @media (max-width: 768px) {
     nav {
-        flex-wrap: wrap;
+        display: flex;
         justify-content: space-between;
         align-items: center;
         padding: 10px 20px;
     }
 
-    nav ul {
-        flex-direction: row; /* Stay horizontal */
-        gap: 15px;
+    .nav-content {
+        display: flex;
+        flex-direction: row; /* Keep horizontal */
+        gap: 20px;
     }
 
-    nav ul li a {
-        font-size: 18px; /* Bigger font for nav links */
+    .nav-content li a {
+        font-size: 18px; /* Bigger font size */
     }
 
     .intro-text {
@@ -320,7 +321,7 @@ footer {
         justify-content: center;
     }
 
-    .tab-titles .tab-links {
+    .tab-links {
         font-size: 20px; /* Bigger tab titles */
     }
 
@@ -329,4 +330,5 @@ footer {
         font-size: 18px; /* Bigger tab content */
     }
 }
+
 
