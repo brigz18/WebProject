@@ -354,6 +354,7 @@ footer {
 
   .intro-text h1 {
     font-size: 20px;
+    margin-top: 50;
   }
 
   .intro-text h1 span {
@@ -362,12 +363,12 @@ footer {
 
   .intro-text p {
     font-size: 11px;
-    margin-top: 15px;
+    margin-top: 20px;
   }
 
  nav ul {
     display: flex; /* Use flexbox */
-    gap: 10px; /* Space between items */
+    gap: 8px; /* Space between items */
     padding-left: 0;
     flex-direction: row; /* Align items horizontally */
     align-items: top left; /* Center items vertically if needed */
