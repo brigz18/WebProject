@@ -297,7 +297,7 @@ body {
 }
 
 .container {
-  padding: 15px 5%; /* more breathing room */
+  padding: 13px 5%; /* more breathing room */
 }
 
   .nav-content {
@@ -307,7 +307,7 @@ body {
   }
 
   .nav-content li a {
-      font-size: 25px;
+      font-size: 23px;
     color: #fff;/* Bigger font size */
   }
 .intro-text {
