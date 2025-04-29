@@ -258,66 +258,6 @@ footer {
   list-style-type: disc;
   margin-left: 20px;
 }
-
-/* RESPONSIVE DESIGN FOR MOBILE AND TABLET */
-
-/* For tablets (768px and below) */
-@media (max-width: 768px) {
-  nav {
-    justify-content: center;
-    padding-top: 10px;
-  }
-  
-  .nav-content {
-    flex-direction: column;
-    gap: 10px;
-  }
-  
-  nav ul {
-    flex-direction: column;
-    gap: 10px;
-  }
-  
-  .intro-text {
-    margin-top: 150px;
-    text-align: center;
-    padding-right: 0;
-  }
-
-  .intro-text h1 {
-    font-size: 30px;
-  }
-
-  .intro-text p {
-    font-size: 14px;
-    text-align: center;
-  }
-
-  section.about,
-  section.skills,
-  section.projects,
-  section.contact {
-    margin: 2rem 1rem;
-    padding: 3rem 1rem;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .skills-content {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .about-text, .about-image, .skills-text, .skills-image {
-    flex: 1 1 100%;
-  }
-
-  .tab-titles {
-    justify-content: center;
-  }
-}
-
 /* For mobile phones (480px and below) */
 @media (max-width: 480px) {
   #header {
