@@ -371,6 +371,46 @@
         </div>
     </section>
 
+    <footer id="footer" class="footer-section">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="Cloud.jpg" alt="Logo" class="footer-logo-img">
+                    <span>My Portfolio</span>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#hero">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#certifications">Certifications</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="https://www.facebook.com/rndrybrng?rdid=wq8l6u9o1hb93YSm&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1WrDBSHZyN%2F#" target="_blank"><i class="fab fa-facebook"></i> Facebook</a></li>
+                        <li><a href="https://github.com/brigz18" target="_blank"><i class="fab fa-github"></i> GitHub</a></li>
+                        <li><a href="https://www.instagram.com/brigz1184/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+                        <li><a href="https://www.linkedin.com/in/roi-andrey-bringino-247b9a363" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-envelope"></i> bringinoroiandrey1@gmail.com</p>
+                    <p><i class="fas fa-phone"></i> +63 9851098163</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Roi Andrey Bringino. All rights reserved.</p>
+                <a href="#hero" class="back-to-top" id="backToTop"><i class="fas fa-arrow-up"></i> Back to Top</a>
+            </div>
+        </div>
+    </footer>
+
     <script>
         function opentab(tabname, event) {
             event.preventDefault(); // Prevents the link from navigating to the top
@@ -438,6 +478,24 @@
         alert('Message sent! (This is a placeholder - integrate with a backend service like EmailJS or Formspree)');
         form.reset();
         checkInputs();
+    });
+
+    // Back-to-Top Button Functionality
+    const backToTopBtn = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 300) {
+            backToTopBtn.style.display = 'inline-block';
+        } else {
+            backToTopBtn.style.display = 'none';
+        }
+    });
+
+    backToTopBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
     });
 
     </script>
