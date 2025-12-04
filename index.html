@@ -194,8 +194,8 @@
                     <p>Java</p>
                 </div>
                 <div class="cert">
-                    <img src="isc2logocc.PNG" alt="ISC2 Logo" onclick="openModal('3f8e0fd5-1897-4b5b-b614-bbd9b80e0465.pdf')">
-                    <p>ISC2</p>
+                    <img src="saylor.jpg" alt="ISC2 Logo" onclick="openModal('Introduction to Cryptography and Network Security.pdf')">
+                    <p>CS260 Introduction to Cryptography and Network Security</p>
                 </div>
                 <div class="cert">
                     <img src="isc2logocc.PNG" alt="ISC2 Logo" onclick="openModal('3f8e0fd5-1897-4b5b-b614-bbd9b80e0465.pdf')">
@@ -495,6 +495,31 @@
         window.scrollTo({
             top: 0,
             behavior: 'smooth'
+        });
+    });
+
+    // Hamburger Menu Toggle
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('active'); // Show/hide menu
+        hamburger.classList.toggle('open'); // Animate hamburger
+    });
+
+    // Close menu when clicking outside or on a link (optional for better UX)
+    document.addEventListener('click', (e) => {
+        if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
+            navLinks.classList.remove('active');
+            hamburger.classList.remove('open');
+        }
+    });
+
+    // Close menu on link click (for mobile)
+    navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+            hamburger.classList.remove('open');
         });
     });
 
