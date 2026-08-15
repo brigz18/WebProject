@@ -1,382 +1,507 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Roi Andrey - Portfolio</title>
+    <title>Roi Andrey Bringino — Full-Stack Developer &amp; Cybersecurity Specialist</title>
+    <meta name="description" content="Portfolio of Roi Andrey Bringino, a full-stack developer and cybersecurity specialist based in Quezon City, Philippines.">
+    <meta name="theme-color" content="#0a0e13">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://bringino.dev/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Roi Andrey Bringino — Full-Stack Developer & Cybersecurity Specialist">
+    <meta property="og:description" content="BSIT candidate from Quezon City, Philippines building full-stack applications and studying application security. Open to junior developer and security-adjacent roles.">
+    <meta property="og:image" content="og-cover.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Roi Andrey Bringino — Full-Stack Developer & Cybersecurity Specialist">
+    <meta name="twitter:description" content="BSIT candidate from Quezon City, Philippines building full-stack applications and studying application security.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Roi Andrey Bringino",
+      "jobTitle": "Full-Stack Developer",
+      "description": "BSIT candidate specializing in full-stack development and application security.",
+      "url": "https://bringino.dev/",
+      "email": "mailto:bringinoroiandrey1@gmail.com",
+      "address": { "@type": "PostalAddress", "addressLocality": "Quezon City", "addressCountry": "PH" },
+      "sameAs": [
+        "https://github.com/brigz18",
+        "https://www.linkedin.com/in/roi-andrey-bringino-247b9a363",
+        "https://www.facebook.com/rndrybrng",
+        "https://www.instagram.com/brigz1184/"
+      ]
+    }
+    </script>
 </head>
 <body>
+
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <!-- SECTION PROGRESS RAIL -->
+    <nav class="rail" aria-label="Section progress">
+        <a href="#hero" class="rail-dot" data-target="hero" aria-label="Home"></a>
+        <a href="#about" class="rail-dot" data-target="about" aria-label="About"></a>
+        <a href="#skills" class="rail-dot" data-target="skills" aria-label="Skills"></a>
+        <a href="#certifications" class="rail-dot" data-target="certifications" aria-label="Certifications"></a>
+        <a href="#projects" class="rail-dot" data-target="projects" aria-label="Projects"></a>
+        <a href="#contact" class="rail-dot" data-target="contact" aria-label="Contact"></a>
+    </nav>
+
+    <!-- COMMAND PALETTE -->
+    <div class="cmdk-backdrop" id="cmdkBackdrop">
+        <div class="cmdk" role="dialog" aria-modal="true" aria-label="Quick navigation">
+            <div class="cmdk-input-row">
+                <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+                <input type="text" id="cmdkInput" placeholder="Jump to a section or link…" autocomplete="off">
+                <kbd>Esc</kbd>
+            </div>
+            <ul class="cmdk-list" id="cmdkList">
+                <li data-href="#hero"><i class="fa-solid fa-house" aria-hidden="true"></i> Home</li>
+                <li data-href="#about"><i class="fa-solid fa-user" aria-hidden="true"></i> About</li>
+                <li data-href="#skills"><i class="fa-solid fa-layer-group" aria-hidden="true"></i> Skills</li>
+                <li data-href="#certifications"><i class="fa-solid fa-award" aria-hidden="true"></i> Certifications</li>
+                <li data-href="#projects"><i class="fa-solid fa-diagram-project" aria-hidden="true"></i> Projects</li>
+                <li data-href="#contact"><i class="fa-solid fa-envelope" aria-hidden="true"></i> Contact</li>
+                <li data-href="mailto:bringinoroiandrey1@gmail.com"><i class="fa-regular fa-paper-plane" aria-hidden="true"></i> Email Roi</li>
+                <li data-href="https://github.com/brigz18" data-external="true"><i class="fa-brands fa-github" aria-hidden="true"></i> Open GitHub</li>
+                <li data-href="https://www.linkedin.com/in/roi-andrey-bringino-247b9a363" data-external="true"><i class="fa-brands fa-linkedin" aria-hidden="true"></i> Open LinkedIn</li>
+                <li data-href="https://1drv.ms/w/c/b7fb8939877e739d/ERZIxYHMsP9FqvyE6Cy7hR8BdQ1_uEvfmnBBMMOwPAg9ZA?e=NvGqjo" data-external="true"><i class="fa-solid fa-file-arrow-down" aria-hidden="true"></i> Download Résumé</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- TOASTS -->
+    <div class="toast-stack" id="toastStack" aria-live="polite"></div>
+
     <header>
-        <nav id="navbar">
+        <nav id="navbar" aria-label="Primary">
             <div class="nav-container">
-                <div class="logo">
-                    <img src="Cloud.jpg" class="logo-img" alt="Logo">
-                    <span>My PortFolio</span>
-                </div>
-                <ul class="nav-links">
-                    <li><a href="#hero">Home</a></li>
+                <a href="#hero" class="logo" aria-label="Roi Andrey Bringino, home">
+                    <span class="logo-mark">RB</span>
+                    <span class="logo-text">Bringino<em>.dev</em></span>
+                </a>
+
+                <ul class="nav-links" id="navLinksList">
                     <li><a href="#about">About</a></li>
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="#certifications">Certifications</a></li>
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#contact">Contact</a></li>
-                    <li><a href="https://1drv.ms/w/c/b7fb8939877e739d/ERZIxYHMsP9FqvyE6Cy7hR8BdQ1_uEvfmnBBMMOwPAg9ZA?e=NvGqjo" class="btn" download>Resume</a></li>
                 </ul>
-                <div class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+
+                <div class="nav-actions">
+                    <button class="cmdk-trigger" id="cmdkTrigger" aria-label="Open quick navigation">
+                        <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i> <span>Search</span> <kbd>⌘K</kbd>
+                    </button>
+                    <button class="theme-toggle" id="themeToggle" aria-label="Toggle light and dark theme">
+                        <i class="fa-solid fa-sun" aria-hidden="true"></i>
+                        <i class="fa-solid fa-moon" aria-hidden="true"></i>
+                    </button>
+                    <a href="https://1drv.ms/w/c/d3f9227c3eb45d9c/IQBwsQ-KGEW6TK3dkt87UpIsATiXTTnXtOinc4oWU5ND4-E?e=GzZVnA" class="btn-resume" target="_blank" rel="noopener">Résumé</a>
                 </div>
+
+                <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navLinksList">
+                    <span></span><span></span><span></span>
+                </button>
             </div>
         </nav>
     </header>
 
-    <section id="hero" class="hero-section">
-        <div class="hero-content">
-            <div class="hero-text">
-                <h5>Hello, I'm</h5>
-                <h1>Roi Andrey Bringino</h1>
-                <p class="titles">Full-Stack Developer | Cybersecurity Specialist </p>
-                <p class="intro">Passionate about securing digital infrastructures and building scalable <br>solutions. Motivated and eager to learn about the field with a strong <br>foundation to work properly and being hardworking.</p>
-                <a href="#contact" class="cta-button">Get In Touch</a>
-            </div>
-            <img src="r.jpg" alt="Profile Photo" class="profile-photo">
-        </div>
-    </section>
+    <main id="main">
 
-    <section id="about" class="about-section">
-        <div class="container">
-            <div class="about-box">
-                <h2>About Me</h2>
-                <p>I am a Bachelor of Science in Information Technology graduated from Quezon City, Philippines. I have a strong passion for analytical thinking and problem-solving, which drives me to understand how systems work and find efficient solutions to real-world challenges. As a detail-oriented and tech-savvy individual, I enjoy learning new technologies and applying my knowledge through hands-on projects. My background in IT has equipped me with skills in programming, web development, system design and database management. I’m eager to start my professional journey, contribute to innovative teams, and continuously grow in the ever-evolving field of technology. During my academic journey, I gained hands-on experience through various school projects and internships, where I developed problem-solving skills and a passion for learning new technologies. I am eager to contribute to a dynamic team, grow professionally, and apply my skills to real-world challenges in the IT industry.</p>
-                <div class="tab-titles">
-                    <a href="#" class="tab-links active-link" onclick="opentab('education', event)">Educational</a>
-                    <a href="#" class="tab-links" onclick="opentab('experience', event)">Experience</a>
-                    <a href="#" class="tab-links" onclick="opentab('other', event)">Other</a>
-                </div>
-                <div class="tab-contents active-tab" id="education">
-                    <ul>
-                        <li>San Diego Elementary School - 2016 Elementary Graduated</li>
-                        <li>Batasan Hills National High School - 2020 High School Graduated</li>
-                        <li>Mary the Queen College of Quezon City - 2022 Senior High School Graduated</li>
-                        <li>Mary the Queen College of Quezon City - 2027 College Graduated</li>
-                    </ul>
-                </div>
-                <div class="tab-contents" id="experience">
-                    <ul>
-                        <li>Capstone Project / Quiz Maker Mobile Applicaton</li>
-                        <li>Network Troubleshooting / CCNA</li>
-                        <li>TESDA / Mindbank Training and Skills Corp. - Computer System Servicing NCII</li>
-                        <li>TESDA / Mindbank Training and Skills Corp. - Contact Center Services NCII</li>
-                    </ul>
-                </div>
-                <div class="tab-contents" id="other">
-                    <ul>
-                        <li>Basic Animation Creator (YouTube)</li>
-                        <li>Freelance Web Designer Projects</li>
-                        <li>Mixing Engineer</li>
-                        <li>Podcast Editor / Producer</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
+        <!-- HERO -->
+        <section id="hero" class="hero-section">
+            <div class="container hero-inner">
 
-    <section id="skills" class="skills-section">
-        <div class="container">
-            <h2>Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-item">
-                    <i class="fa-solid fa-globe"></i>
-                    <h3>Web Surfing</h3>
+                <div class="status-pill reveal">
+                    <span class="pulse-dot" aria-hidden="true"></span>
+                    Welcome to My Portfolio
+                    <span class="pill-divider" aria-hidden="true">·</span>
+                    <span id="localClock">--:--:-- PHT</span>
                 </div>
-                <div class="skill-item">
-                    <i class="fa-solid fa-user"></i>
-                    <h3>Customer Service</h3>
-                </div>
-                <div class="skill-item">
-                    <i class="fa-brands fa-microsoft"></i>
-                    <h3>Office 365 management</h3>
-                </div>
-                <div class="skill-item">
-                    <i class="fa-solid fa-desktop"></i>
-                    <h3>Software/Hardware Troubleshooting</h3>
-                </div>
-                <div class="skill-item">
-                    <i class="fa-solid fa-code"></i>
-                    <h3>Full-Stack Developer</h3>
-                </div>
-                <div class="skill-item">
-                    <i class="fa-solid fa-database"></i>
-                    <h3>Databases</h3>
-                </div>
-                <div class="skill-item">
-                    <i class="fa-brands fa-python"></i>
-                    <h3>Python</h3>
-                </div>
-                <div class="skill-item">
-                    <i class="fa-brands fa-java"></i>
-                    <h3>Java</h3>
-                </div>
-                <div class="skill-item">
-                    <i class="fa-solid fa-p"></i><i class="fa-solid fa-s"></i>
-                    <h3>Adobe Photoshop</h3>
-                </div>
-                <div class="skill-item">
-                    <i class="fa-solid fa-network-wired"></i>
-                    <h3>Networking/CCNA</h3>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <section id="certifications" class="certifications-section">
-        <div class="container">
-            <h2>Certifications</h2>
-            <div class="cert-grid">
-                <!-- Certification item -->
-                <div class="cert">
-                    <img src="testda.jpg" alt="CSS" onclick="openModal('f1daa231-c4d3-48f6-a586-be5fdf0b0f38.jpg')">
-                    <p>Computer System Servicing NC II</p>
-                </div>
-                <div class="cert">
-                    <img src="isc2logocc.PNG" alt="ISC2 Logo" onclick="openModal('Course Pre-assessment.pdf')">
-                    <p>ISC2 Course <br>Pre-assessment</p>
-                </div>
-                <div class="cert">
-                    <img src="isc2logocc.PNG" alt="ISC2 Logo" onclick="openModal('Security Principles.pdf')">
-                    <p>ISC2 Domain 1: Security Principles</p>
-                </div>
-                <div class="cert">
-                    <img src="isc2logocc.PNG" alt="ISC2 Logo" onclick="openModal('Incident Response, Business Continuity and Disaster Recovery Concepts.pdf')">
-                    <p>ISC2 Domain 2: IR, BC & DRC</p>
-                </div>
-                <div class="cert">
-                    <img src="isc2logocc.PNG" alt="ISC2 Logo" onclick="openModal('Access Control Concepts.pdf')">
-                    <p>ISC2 Domain 3:<br> Access Control Concepts</p>
-                </div>
-                <div class="cert">
-                    <img src="isc2logocc.PNG" alt="ISC2 Logo" onclick="openModal('Network Security.pdf')">
-                    <p>ISC2 Domain 4: Network Security</p>
-                </div>
-                <div class="cert">
-                    <img src="isc2logocc.PNG" alt="ISC2 Logo" onclick="openModal('Security Operations.pdf')">
-                    <p>ISC2 Domain 5: Security Operations</p>
-                </div>
-                <div class="cert">
-                    <img src="isc2logocc.PNG" alt="ISC2 Logo" onclick="openModal('Course Conclusion & Final Assessment.pdf')">
-                    <p>ISC2 CC Final Assessment</p>
-                </div>
-                <div class="cert">
-                    <img src="mqcqclogo.jpg" alt="ISC2 Logo" onclick="openModal('IT Learning Systems Using Massive Open Online Course.jpg')">
-                    <p>IT Learning Systems Using Massive Open Online Course</p>
-                </div>
-                <div class="cert">
-                    <img src="mqcqclogo.jpg" alt="ISC2 Logo" onclick="openModal('Mobile Application Development.jpg')">
-                    <p>Mobile Application Development</p>
-                </div>
-                <div class="cert">
-                    <img src="threat landscape.PNG" alt="ISC2 Logo" onclick="openModal('fortinet landscape.PNG')">
-                    <p>Threat Landscape 3.0 Self-Paced</p>
-                </div>
-                <div class="cert">
-                    <img src="fortinet_logo.png" alt="ISC2 Logo" onclick="openModal('threat landscape.PNG')">
-                    <p>Cybersecurity 3.0<br> Self-Paced</p>
-                </div>
-                <div class="cert">
-                    <img src="w3school_logo.jpg" alt="ISC2 Logo" onclick="openModal('3f8e0fd5-1897-4b5b-b614-bbd9b80e0465.pdf')">
-                    <p>Python</p>
-                </div>
-                <div class="cert">
-                    <img src="w3school_logo.jpg" alt="ISC2 Logo" onclick="openModal('3f8e0fd5-1897-4b5b-b614-bbd9b80e0465.pdf')">
-                    <p>Java</p>
-                </div>
-                <div class="cert">
-                    <img src="saylor.jpg" alt="ISC2 Logo" onclick="openModal('Introduction to Cryptography and Network Security.pdf')">
-                    <p>CS260 Introduction to Cryptography and Network Security</p>
-                </div>
-                <div class="cert">
-                    <img src="isc2logocc.PNG" alt="ISC2 Logo" onclick="openModal('3f8e0fd5-1897-4b5b-b614-bbd9b80e0465.pdf')">
-                    <p>ISC2</p>
-                </div>
-                <div class="cert">
-                    <img src="isc2logocc.PNG" alt="ISC2 Logo" onclick="openModal('3f8e0fd5-1897-4b5b-b614-bbd9b80e0465.pdf')">
-                    <p>ISC2</p>
-                </div>
-                <div class="cert">
-                    <img src="isc2logocc.PNG" alt="ISC2 Logo" onclick="openModal('3f8e0fd5-1897-4b5b-b614-bbd9b80e0465.pdf')">
-                    <p>ISC2</p>
-                </div>
-                <div class="cert">
-                    <img src="isc2logocc.PNG" alt="ISC2 Logo" onclick="openModal('3f8e0fd5-1897-4b5b-b614-bbd9b80e0465.pdf')">
-                    <p>ISC2</p>
-                </div>
-                <div class="cert">
-                    <img src="isc2logocc.PNG" alt="ISC2 Logo" onclick="openModal('3f8e0fd5-1897-4b5b-b614-bbd9b80e0465.pdf')">
-                    <p>ISC2</p>
-                </div>
-                <div class="cert">
-                    <img src="isc2logocc.PNG" alt="ISC2 Logo" onclick="openModal('3f8e0fd5-1897-4b5b-b614-bbd9b80e0465.pdf')">
-                    <p>ISC2</p>
-                </div>
-            </div>
-        </div>
+                <p class="kicker reveal">Hi, I'm</p>
+                <h1 class="reveal">Roi Andrey Bringino</h1>
+                <p class="hero-tagline reveal">Full-Stack Developer &amp; Cybersecurity Specialist</p>
+                <p class="intro reveal">I build web applications end-to-end and think about how to keep them secure while I do it. BSIT candidate in Quezon City, Philippines, with hands-on training across development, networking, and information security — currently looking for a team to grow with.</p>
 
-        <!-- Modal for zoomed certificate -->
-        <div id="certModal" class="modal">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <img class="modal-content" id="modalImg">
-            <embed class="modal-content modal-pdf" id="modalPdf" type="application/pdf">
-        </div>
-    </section>
+                <div class="hero-cta reveal">
+                    <a href="#contact" class="btn-primary">Get In Touch</a>
+                    <a href="#projects" class="btn-secondary">View Projects</a>
+                </div>
 
-    <section class="projects" id="projects" data-aos="fade-right">
-        <div class="container">
-            <h2>Projects</h2><br>
-            <div class="projects-grid">
-                <div class="project">
-                    <p>A personal website made using HTML, CSS and JS. <a href="">View Project</a></p>
-                </div>
-                <div class="project">
-                    <p>Capstone Project: Development and Implementation of an Automated <br>Quiz-Making Mobile App. <a href="https://github.com/yourusername/student-management-system" target="_blank">View Project</a></p>
-                </div>
-                <div class="project">
-                    <p>AI-Powered Learning Management System (LMS). <a href="https://github.com/yourusername/student-management-system" target="_blank">View Project</a></p>
-                </div>
-                <div class="project">
-                    <p>Decentralized E-Voting System (Blockchain-Based). <a href="https://github.com/yourusername/student-management-system" target="_blank">View Project</a></p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="contact-section">
-        <div class="container">
-            <h2>Contact Me</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h3>Contact Information</h3>
-                    <div class="separator"></div>
-                    <ul class="contacts-list">
-                        <li class="contact-item">
-                            <div class="contact-container">
-                                <div class="icon-box">
-                                    <i class="fa-regular fa-envelope"></i>
-                                </div>
-                                <div class="contact-info">
-                                    <p class="contact-title">Email</p>
-                                    <a href="mailto:bringinoroiandrey1@gmail.com" class="contact-link">bringinoroiandrey1@gmail.com</a>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="contact-item">
-                            <div class="contact-container">
-                                <div class="icon-box">
-                                    <i class="fa-solid fa-mobile"></i>
-                                </div>
-                                <div class="contact-info">
-                                    <p class="contact-title">Phone</p>
-                                    <a href="tel:+639851098163" class="contact-link">+63 9851098163</a>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="contact-item">
-                            <div class="contact-container">
-                                <div class="icon-box">
-                                    <i class="fa-brands fa-facebook"></i>
-                                </div>
-                                <div class="contact-info">
-                                    <p class="contact-title">Facebook</p>
-                                    <a href="https://www.facebook.com/rndrybrng?rdid=wq8l6u9o1hb93YSm&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1WrDBSHZyN%2F#" target="_blank" class="contact-link">
-                                        <Facebook>Roi Andrey Bringino</Facebook>
-                                    </a>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="contact-item">
-                            <div class="contact-container">
-                                <div class="icon-box">
-                                    <i class="fa-brands fa-github"></i>
-                                </div>
-                                <div class="contact-info">
-                                    <p class="contact-title">Github</p>
-                                    <a href="https://github.com/brigz18" target="_blank" class="contact-link">
-                                        <Github>brigz18</Github>
-                                    </a>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="contact-item">
-                            <div class="contact-container">
-                                <div class="icon-box">
-                                    <i class="fa-brands fa-instagram"></i>
-                                </div>
-                                <div class="contact-info">
-                                    <p class="contact-title">Instagram</p>
-                                    <a href="https://www.instagram.com/brigz1184/" target="_blank" class="contact-link">
-                                        <Instagram>brigz1184</Instagram>
-                                    </a>
-                                </div>
-                            </div>
-                        </li>                        <Link class="contact-item">
-                            <div class="contact-container">
-                                <div class="icon-box">
-                                    <i class="fa-brands fa-linkedin"></i>
-                                </div>
-                                <div class="contact-info">
-                                    <p class="contact-title">LinkedIn</p>
-                                    <a href="https://www.linkedin.com/in/roi-andrey-bringino-247b9a363" target="_blank" class="contact-link">
-                                        <LinkedIn>Roi Andrey Bringino</LinkedIn>
-                                    </a>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                    <div class="separator"></div>
-                    <ul class="social-list">
-                        <li class="social-item">
-                            <a href="#" class="social-link">
-                                <ion-icon name="logo-facebook"></ion-icon>
-                            </a>
-                        </li>
-                        <li class="social-item">
-                            <a href="#" class="social-link">
-                                <ion-icon name="logo-twitter"></ion-icon>
-                            </a>
-                        </li>
-                        <li class="social-item">
-                            <a href="#" class="social-link">
-                                <ion-icon name="logo-instagram"></ion-icon>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="contact-form">
-                    <h3 class="h3 form-title">Contact Form</h3>
-                    <form action="https://formspree.io/f/2881128986241400471" method="POST" class="form" data-form>
-                        <div class="input-wrapper">
-                            <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
-                            <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
+                <div class="hero-grid reveal">
+                    <div class="code-window" aria-hidden="true">
+                        <div class="code-titlebar">
+                            <span class="dot dot-a"></span><span class="dot dot-b"></span><span class="dot dot-c"></span>
+                            <span class="code-filename">profile.ts</span>
                         </div>
-                        <textarea name="message" class="form-input message-textarea" placeholder="Your Message" required data-form-input></textarea>
-                        <button class="form-btn" type="submit" disabled data-form-btn>
-                            <ion-icon name="paper-plane"></ion-icon>
-                            <span>Send Message</span>
-                        </button>
-                    </form>
+                        <pre class="code-body"><code><span class="tok-kw">type</span> <span class="tok-type">Developer</span> = {
+  name: <span class="tok-type">string</span>;
+  focus: <span class="tok-type">string</span>[];
+  basedIn: <span class="tok-type">string</span>;
+  status: <span class="tok-str">"available"</span>;
+};
+
+<span class="tok-kw">const</span> roi: <span class="tok-type">Developer</span> = {
+  name: <span class="tok-str">"Roi Andrey Bringino"</span>,
+  focus: [<span class="tok-str">"Full-Stack Dev"</span>, <span class="tok-str">"AppSec"</span>],
+  basedIn: <span class="tok-str">"Quezon City, PH"</span>,
+  status: <span class="tok-str">"available"</span>,
+};</code></pre>
+                    </div>
+
+                    <div class="status-log" role="note" aria-label="Quick facts">
+                        <div class="status-log-head">
+                            <span class="dot dot-c" aria-hidden="true"></span>
+                            <span class="code-filename">status.log</span>
+                        </div>
+                        <dl class="status-log-body">
+                            <div class="status-row"><dt>role</dt><dd>Full-Stack Dev · AppSec</dd></div>
+                            <div class="status-row"><dt>education</dt><dd>BSIT, expected 2027</dd></div>
+                            <div class="status-row"><dt>based_in</dt><dd>Quezon City, PH (GMT+8)</dd></div>
+                            <div class="status-row"><dt>looking_for</dt><dd>Dev / IT support roles</dd></div>
+                            <div class="status-row"><dt>reply_time</dt><dd>&lt; 24h</dd></div>
+                        </dl>
+                    </div>
+                </div>
+
+                <ul class="marquee reveal" aria-hidden="true">
+                    <li class="marquee-track">
+                        <span><i class="fa-brands fa-python"></i> Python</span>
+                        <span><i class="fa-brands fa-java"></i> Java</span>
+                        <span><i class="fa-brands fa-js"></i> JavaScript</span>
+                        <span><i class="fa-solid fa-database"></i> SQL</span>
+                        <span><i class="fa-solid fa-network-wired"></i> Networking</span>
+                        <span><i class="fa-solid fa-shield-halved"></i> ISC2 CC</span>
+                        <span><i class="fa-brands fa-git-alt"></i> Git</span>
+                        <span><i class="fa-brands fa-python"></i> Python</span>
+                        <span><i class="fa-brands fa-java"></i> Java</span>
+                        <span><i class="fa-brands fa-js"></i> JavaScript</span>
+                        <span><i class="fa-solid fa-database"></i> SQL</span>
+                        <span><i class="fa-solid fa-network-wired"></i> Networking</span>
+                        <span><i class="fa-solid fa-shield-halved"></i> ISC2 CC</span>
+                        <span><i class="fa-brands fa-git-alt"></i> Git</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section id="about" class="about-section">
+            <div class="container">
+                <p class="eyebrow reveal">01 — About</p>
+                <h2 class="reveal">Who I am</h2>
+
+                <div class="bento reveal">
+                    <div class="bento-cell bento-bio">
+                        <p>I'm a BSIT candidate with a strong interest in analytical thinking and problem-solving — I like understanding how systems actually work, then finding efficient ways to make them better.</p>
+                        <p>My coursework covers programming, web development, system design, database management, and Security, built through school projects and hands-on training. I'm looking to bring that into a team, contribute from day one, and keep growing in a field that never stands still.</p>
+                    </div>
+
+                    <div class="bento-cell bento-photo">
+                        <img src="r.jpg" alt="Portrait of Roi Andrey Bringino">
+                        <div class="bento-photo-caption">
+                            <strong>Roi Andrey Bringino</strong>
+                            <span>Dev / Security</span>
+                        </div>
+                    </div>
+
+                    <div class="bento-cell bento-clock">
+                        <p class="bento-label">Local time</p>
+                        <p class="bento-big" id="bentoClock">--:--</p>
+                        <p class="bento-sub">Quezon City, PH (GMT+8)</p>
+                    </div>
+
+                    <div class="bento-cell bento-focus">
+                        <p class="bento-label">Currently</p>
+                        <ul class="bento-tags">
+                            <li>Open to any-level roles</li>
+                            <li>Sharpening application security</li>
+                        </ul>
+                    </div>
+
+                    <div class="bento-cell bento-degree">
+                        <p class="bento-label">Education</p>
+                        <p class="bento-mid">BS Information Technology</p>
+                        <p class="bento-sub">Mary the Queen College of Quezon City · Graduated 2027</p>
+                    </div>
+                </div>
+
+                <div class="tabs reveal">
+                    <div class="tab-titles" role="tablist" aria-label="About me details">
+                        <button class="tab-links active-link" role="tab" aria-selected="true" aria-controls="education" id="tab-education" onclick="opentab('education', event)">Education</button>
+                        <button class="tab-links" role="tab" aria-selected="false" aria-controls="experience" id="tab-experience" onclick="opentab('experience', event)">Experience</button>
+                        <button class="tab-links" role="tab" aria-selected="false" aria-controls="other" id="tab-other" onclick="opentab('other', event)">Other</button>
+                    </div>
+
+                    <div class="tab-contents active-tab" id="education" role="tabpanel" aria-labelledby="tab-education">
+                        <ul>
+                            <li><span class="tab-year">2027</span> Mary the Queen College of Quezon City — BS Information Technology <em>Graduated</em></li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience" role="tabpanel" aria-labelledby="tab-experience">
+                        <ul>
+                            <li>Capstone project — Web-Based Point of Sale and Inventory Management System</li>
+                            <li>Network troubleshooting &amp; CCNA coursework</li>
+                            <li>TESDA / Mindbank Training &amp; Skills Corp. — Computer System Servicing NC II</li>
+                            <li>TESDA / Mindbank Training &amp; Skills Corp. — Contact Center Services NC II</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="other" role="tabpanel" aria-labelledby="tab-other">
+                        <ul>
+                            <li>Basic animation creation (YouTube)</li>
+                            <li>Freelance web design projects</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <!-- SKILLS -->
+        <section id="skills" class="skills-section">
+            <div class="container">
+                <p class="eyebrow reveal">02 — Skills</p>
+                <h2 class="reveal">What I work with</h2>
+
+                <div class="skills-columns reveal">
+                    <div class="skill-group">
+                        <p class="panel-label">Development</p>
+                        <div class="skill-list">
+                            <div class="skill-item"><i class="fa-solid fa-code" aria-hidden="true"></i><span>Full-Stack Development</span></div>
+                            <div class="skill-item"><i class="fa-brands fa-python" aria-hidden="true"></i><span>Python</span></div>
+                            <div class="skill-item"><i class="fa-brands fa-java" aria-hidden="true"></i><span>Java</span></div>
+                            <div class="skill-item"><i class="fa-solid fa-database" aria-hidden="true"></i><span>Databases</span></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-group">
+                        <p class="panel-label">Security &amp; Networking</p>
+                        <div class="skill-list">
+                            <div class="skill-item"><i class="fa-solid fa-network-wired" aria-hidden="true"></i><span>Networking / CCNA</span></div>
+                            <div class="skill-item"><i class="fa-solid fa-desktop" aria-hidden="true"></i><span>Hardware &amp; Software Troubleshooting</span></div>
+                            <div class="skill-item"><i class="fa-solid fa-desktop" aria-hidden="true"></i><span>System Administrator</span></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-group">
+                        <p class="panel-label">Tools &amp; Productivity</p>
+                        <div class="skill-list">
+                            <div class="skill-item"><i class="fa-brands fa-microsoft" aria-hidden="true"></i><span>Office 365 Management</span></div>
+                            <div class="skill-item"><i class="fa-solid fa-globe" aria-hidden="true"></i><span>Web Surfing</span></div>
+                            <div class="skill-item"><i class="fa-solid fa-headset" aria-hidden="true"></i><span>Customer Service</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CERTIFICATIONS -->
+        <section id="certifications" class="certifications-section">
+            <div class="container">
+                <p class="eyebrow reveal">03 — Certifications</p>
+                <h2 class="reveal">Certifications &amp; training</h2>
+                <p class="section-sub reveal">Click any card to view the certificate.</p>
+
+                <div class="cert-grid reveal">
+                    <button class="cert" onclick="openModal('f1daa231-c4d3-48f6-a586-be5fdf0b0f38.jpg')">
+                        <img src="testda.jpg" alt="" loading="lazy">
+                        <div><p>Computer System Servicing NC II <i class="fa-solid fa-circle-check cert-verified" aria-hidden="true"></i></p><span>TESDA</span></div>
+                    </button>
+                    <button class="cert" onclick="openModal('Course Pre-assessment.pdf')">
+                        <img src="isc2logocc.PNG" alt="" loading="lazy">
+                        <div><p>Course Pre-assessment <i class="fa-solid fa-circle-check cert-verified" aria-hidden="true"></i></p><span>ISC2</span></div>
+                    </button>
+                    <button class="cert" onclick="openModal('Security Principles.pdf')">
+                        <img src="isc2logocc.PNG" alt="" loading="lazy">
+                        <div><p>Domain 1: Security Principles <i class="fa-solid fa-circle-check cert-verified" aria-hidden="true"></i></p><span>ISC2</span></div>
+                    </button>
+                    <button class="cert" onclick="openModal('Incident Response, Business Continuity and Disaster Recovery Concepts.pdf')">
+                        <img src="isc2logocc.PNG" alt="" loading="lazy">
+                        <div><p>Domain 2: IR, BC &amp; DR Concepts <i class="fa-solid fa-circle-check cert-verified" aria-hidden="true"></i></p><span>ISC2</span></div>
+                    </button>
+                    <button class="cert" onclick="openModal('Access Control Concepts.pdf')">
+                        <img src="isc2logocc.PNG" alt="" loading="lazy">
+                        <div><p>Domain 3: Access Control Concepts <i class="fa-solid fa-circle-check cert-verified" aria-hidden="true"></i></p><span>ISC2</span></div>
+                    </button>
+                    <button class="cert" onclick="openModal('Network Security.pdf')">
+                        <img src="isc2logocc.PNG" alt="" loading="lazy">
+                        <div><p>Domain 4: Network Security <i class="fa-solid fa-circle-check cert-verified" aria-hidden="true"></i></p><span>ISC2</span></div>
+                    </button>
+                    <button class="cert" onclick="openModal('Security Operations.pdf')">
+                        <img src="isc2logocc.PNG" alt="" loading="lazy">
+                        <div><p>Domain 5: Security Operations <i class="fa-solid fa-circle-check cert-verified" aria-hidden="true"></i></p><span>ISC2</span></div>
+                    </button>
+                    <button class="cert" onclick="openModal('Course Conclusion & Final Assessment.pdf')">
+                        <img src="isc2logocc.PNG" alt="" loading="lazy">
+                        <div><p>CC — Final Assessment <i class="fa-solid fa-circle-check cert-verified" aria-hidden="true"></i></p><span>ISC2</span></div>
+                    </button>
+                    <button class="cert" onclick="openModal('IT Learning Systems Using Massive Open Online Course.jpg')">
+                        <img src="mqcqclogo.jpg" alt="" loading="lazy">
+                        <div><p>IT Learning Systems (MOOC) <i class="fa-solid fa-circle-check cert-verified" aria-hidden="true"></i></p><span>MQCQC</span></div>
+                    </button>
+                    <button class="cert" onclick="openModal('Mobile Application Development.jpg')">
+                        <img src="mqcqclogo.jpg" alt="" loading="lazy">
+                        <div><p>Mobile Application Development <i class="fa-solid fa-circle-check cert-verified" aria-hidden="true"></i></p><span>MQCQC</span></div>
+                    </button>
+                    <button class="cert" onclick="openModal('threat landscape.PNG')">
+                        <img src="fortinet_logo.png" alt="" loading="lazy">
+                        <div><p>Threat Landscape 3.0 — Self-Paced <i class="fa-solid fa-circle-check cert-verified" aria-hidden="true"></i></p><span>Fortinet</span></div>
+                    </button>
+                    <button class="cert" onclick="openModal('fortinet landscape.PNG')">
+                        <img src="fortinet_logo.png" alt="" loading="lazy">
+                        <div><p>Cybersecurity 3.0 — Self-Paced <i class="fa-solid fa-circle-check cert-verified" aria-hidden="true"></i></p><span>Fortinet</span></div>
+                    </button>
+                    <button class="cert" onclick="openModal('3f8e0fd5-1897-4b5b-b614-bbd9b80e0465.pdf')">
+                        <img src="w3school_logo.jpg" alt="" loading="lazy">
+                        <div><p>Python <i class="fa-solid fa-circle-check cert-verified" aria-hidden="true"></i></p><span>W3Schools</span></div>
+                    </button>
+                    <button class="cert" onclick="openModal('3f8e0fd5-1897-4b5b-b614-bbd9b80e0465.pdf')">
+                        <img src="w3school_logo.jpg" alt="" loading="lazy">
+                        <div><p>Java <i class="fa-solid fa-circle-check cert-verified" aria-hidden="true"></i></p><span>W3Schools</span></div>
+                    </button>
+                    <button class="cert" onclick="openModal('Introduction to Cryptography and Network Security.pdf')">
+                        <img src="saylor.jpg" alt="" loading="lazy">
+                        <div><p>CS260: Cryptography &amp; Network Security <i class="fa-solid fa-circle-check cert-verified" aria-hidden="true"></i></p><span>Saylor Academy</span></div>
+                    </button>
+                </div>
+            </div>
+
+            <div id="certModal" class="modal" role="dialog" aria-modal="true" aria-label="Certificate viewer" aria-hidden="true" tabindex="-1">
+                <button class="close" onclick="closeModal()" aria-label="Close certificate viewer">&times;</button>
+                <img class="modal-content modal-img" id="modalImg" alt="Enlarged certificate">
+                <embed class="modal-content modal-pdf" id="modalPdf" type="application/pdf">
+            </div>
+        </section>
+
+        <!-- PROJECTS -->
+        <section class="projects" id="projects">
+            <div class="container">
+                <p class="eyebrow reveal">04 — Projects</p>
+                <h2 class="reveal">Selected projects</h2>
+
+                <div class="projects-grid reveal">
+                    <article class="project">
+                        <p class="project-tag">Personal · Shipped</p>
+                        <h3>Developer Portfolio</h3>
+                        <p>This site — designed and built from scratch with semantic HTML, custom CSS, and vanilla JavaScript. No frameworks, no templates.</p>
+                        <a href="#hero">View Project <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                    </article>
+                    <article class="project">
+                        <p class="project-tag">Capstone</p>
+                        <h3>PoS</h3>
+                        <p>Web-Based Point of Sale and Inventory Management System, built as a capstone project.</p>
+                        <a href="https://github.com/brigz18" target="_blank" rel="noopener">View Project <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                    </article>
+                    <article class="project">
+                        <p class="project-tag">Concept</p>
+                        <h3>AI-Powered LMS</h3>
+                        <p>A learning management system concept exploring AI-assisted content delivery and adaptive learning paths.</p>
+                        <a href="https://github.com/brigz18" target="_blank" rel="noopener">View Project <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                    </article>
+                    <article class="project">
+                        <p class="project-tag">Concept</p>
+                        <h3>Decentralized E-Voting</h3>
+                        <p>A blockchain-based e-voting system exploring tamper-resistant, auditable elections.</p>
+                        <a href="https://github.com/brigz18" target="_blank" rel="noopener">View Project <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <p class="eyebrow reveal">05 — Contact</p>
+                <h2 class="reveal">Let's work together</h2>
+
+                <div class="contact-content reveal">
+                    <div class="contact-info">
+                        <ul class="contacts-list">
+                            <li class="contact-item">
+                                <div class="contact-container">
+                                    <div class="icon-box"><i class="fa-regular fa-envelope" aria-hidden="true"></i></div>
+                                    <div class="contact-text">
+                                        <p class="contact-title">Email</p>
+                                        <a href="mailto:bringinoroiandrey1@gmail.com" class="contact-link">bringinoroiandrey1@gmail.com</a>
+                                    </div>
+                                    <button class="copy-btn" id="copyEmailBtn" aria-label="Copy email address"><i class="fa-regular fa-copy" aria-hidden="true"></i></button>
+                                </div>
+                            </li>
+                            <li class="contact-item">
+                                <div class="contact-container">
+                                    <div class="icon-box"><i class="fa-solid fa-mobile" aria-hidden="true"></i></div>
+                                    <div class="contact-text">
+                                        <p class="contact-title">Phone</p>
+                                        <a href="tel:+639851098163" class="contact-link">+63 985 109 8163</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="contact-item">
+                                <div class="contact-container">
+                                    <div class="icon-box"><i class="fa-brands fa-facebook" aria-hidden="true"></i></div>
+                                    <div class="contact-text">
+                                        <p class="contact-title">Facebook</p>
+                                        <a href="https://www.facebook.com/rndrybrng" target="_blank" rel="noopener" class="contact-link">Roi Andrey Bringino</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="contact-item">
+                                <div class="contact-container">
+                                    <div class="icon-box"><i class="fa-brands fa-github" aria-hidden="true"></i></div>
+                                    <div class="contact-text">
+                                        <p class="contact-title">GitHub</p>
+                                        <a href="https://github.com/brigz18" target="_blank" rel="noopener" class="contact-link">brigz18</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="contact-item">
+                                <div class="contact-container">
+                                    <div class="icon-box"><i class="fa-brands fa-linkedin" aria-hidden="true"></i></div>
+                                    <div class="contact-text">
+                                        <p class="contact-title">LinkedIn</p>
+                                        <a href="https://www.linkedin.com/in/roi-andrey-bringino-247b9a363" target="_blank" rel="noopener" class="contact-link">Roi Andrey Bringino</a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="contact-form">
+                        <h3 class="form-title">Send a message</h3>
+                        <!-- Replace the form "action" below with your own Formspree endpoint (formspree.io) before publishing. -->
+                        <form action="https://formspree.io/f/your-form-id" method="POST" class="form" data-form>
+                            <div class="input-wrapper">
+                                <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
+                                <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
+                            </div>
+                            <textarea name="message" class="form-input message-textarea" placeholder="Your message" required data-form-input></textarea>
+                            <button class="form-btn" type="submit" disabled data-form-btn>
+                                <span>Send Message</span> <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
 
     <footer id="footer" class="footer-section">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
-                    <img src="Cloud.jpg" alt="Logo" class="footer-logo-img">
-                    <span>My Portfolio</span>
+                    <span class="logo-mark">RB</span>
+                    <span>Roi Andrey Bringino</span>
                 </div>
                 <div class="footer-links">
                     <h4>Quick Links</h4>
@@ -392,137 +517,247 @@
                 <div class="footer-social">
                     <h4>Connect</h4>
                     <ul>
-                        <li><a href="https://www.facebook.com/rndrybrng?rdid=wq8l6u9o1hb93YSm&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1WrDBSHZyN%2F#" target="_blank"><i class="fab fa-facebook"></i> Facebook</a></li>
-                        <li><a href="https://github.com/brigz18" target="_blank"><i class="fab fa-github"></i> GitHub</a></li>
-                        <li><a href="https://www.instagram.com/brigz1184/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
-                        <li><a href="https://www.linkedin.com/in/roi-andrey-bringino-247b9a363" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+                        <li><a href="https://www.facebook.com/rndrybrng" target="_blank" rel="noopener"><i class="fa-brands fa-facebook" aria-hidden="true"></i> Facebook</a></li>
+                        <li><a href="https://github.com/brigz18" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-hidden="true"></i> GitHub</a></li>
+                        <li><a href="https://www.linkedin.com/in/roi-andrey-bringino-247b9a363" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin" aria-hidden="true"></i> LinkedIn</a></li>
                     </ul>
                 </div>
                 <div class="footer-contact">
                     <h4>Contact Info</h4>
-                    <p><i class="fas fa-envelope"></i> bringinoroiandrey1@gmail.com</p>
-                    <p><i class="fas fa-phone"></i> +63 9851098163</p>
+                    <p><i class="fa-solid fa-envelope" aria-hidden="true"></i> bringinoroiandrey1@gmail.com</p>
+                    <p><i class="fa-solid fa-phone" aria-hidden="true"></i> +63 985 109 8163</p>
                 </div>
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2024 Roi Andrey Bringino. All rights reserved.</p>
-                <a href="#hero" class="back-to-top" id="backToTop"><i class="fas fa-arrow-up"></i> Back to Top</a>
+                <a href="#hero" class="back-to-top" id="backToTop"><i class="fa-solid fa-arrow-up" aria-hidden="true"></i> Back to Top</a>
             </div>
         </div>
     </footer>
 
     <script>
+        /* ---------- Theme toggle ---------- */
+        const root = document.documentElement;
+        const themeToggle = document.getElementById('themeToggle');
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) root.setAttribute('data-theme', savedTheme);
+        themeToggle.addEventListener('click', () => {
+            const next = root.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+            root.setAttribute('data-theme', next);
+            localStorage.setItem('theme', next);
+        });
+
+        /* ---------- Toasts ---------- */
+        function showToast(message) {
+            const stack = document.getElementById('toastStack');
+            const toast = document.createElement('div');
+            toast.className = 'toast';
+            toast.textContent = message;
+            stack.appendChild(toast);
+            requestAnimationFrame(() => toast.classList.add('show'));
+            setTimeout(() => {
+                toast.classList.remove('show');
+                setTimeout(() => toast.remove(), 250);
+            }, 2400);
+        }
+
+        /* ---------- Copy email ---------- */
+        document.getElementById('copyEmailBtn').addEventListener('click', async () => {
+            const email = 'bringinoroiandrey1@gmail.com';
+            try {
+                await navigator.clipboard.writeText(email);
+            } catch (e) {
+                const ta = document.createElement('textarea');
+                ta.value = email;
+                document.body.appendChild(ta);
+                ta.select();
+                document.execCommand('copy');
+                ta.remove();
+            }
+            showToast('Email copied to clipboard');
+        });
+
+        /* ---------- Live Manila clock ---------- */
+        function updateClocks() {
+            const now = new Date();
+            const opts = { timeZone: 'Asia/Manila', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false };
+            const optsShort = { timeZone: 'Asia/Manila', hour: '2-digit', minute: '2-digit', hour12: false };
+            const full = new Intl.DateTimeFormat('en-GB', opts).format(now);
+            const short = new Intl.DateTimeFormat('en-GB', optsShort).format(now);
+            const clock = document.getElementById('localClock');
+            const bento = document.getElementById('bentoClock');
+            if (clock) clock.textContent = full + ' PHT';
+            if (bento) bento.textContent = short;
+        }
+        updateClocks();
+        setInterval(updateClocks, 1000);
+
+        /* ---------- Command palette ---------- */
+        const cmdkBackdrop = document.getElementById('cmdkBackdrop');
+        const cmdkInput = document.getElementById('cmdkInput');
+        const cmdkList = document.getElementById('cmdkList');
+        const cmdkItems = [...cmdkList.querySelectorAll('li')];
+        let cmdkLastFocused = null;
+
+        function openPalette() {
+            cmdkLastFocused = document.activeElement;
+            cmdkBackdrop.classList.add('open');
+            cmdkInput.value = '';
+            filterPalette('');
+            setTimeout(() => cmdkInput.focus(), 10);
+        }
+        function closePalette() {
+            cmdkBackdrop.classList.remove('open');
+            if (cmdkLastFocused) cmdkLastFocused.focus();
+        }
+        function filterPalette(q) {
+            const query = q.trim().toLowerCase();
+            cmdkItems.forEach(li => {
+                const match = li.textContent.toLowerCase().includes(query);
+                li.style.display = match ? 'flex' : 'none';
+            });
+        }
+
+        document.getElementById('cmdkTrigger').addEventListener('click', openPalette);
+        cmdkBackdrop.addEventListener('click', (e) => { if (e.target === cmdkBackdrop) closePalette(); });
+        cmdkInput.addEventListener('input', (e) => filterPalette(e.target.value));
+        cmdkItems.forEach(li => {
+            li.addEventListener('click', () => {
+                const href = li.dataset.href;
+                closePalette();
+                if (li.dataset.external) {
+                    window.open(href, '_blank', 'noopener');
+                } else {
+                    window.location.hash = href.replace('#', '');
+                    document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+        document.addEventListener('keydown', (e) => {
+            if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') {
+                e.preventDefault();
+                cmdkBackdrop.classList.contains('open') ? closePalette() : openPalette();
+            }
+            if (e.key === 'Escape') { closePalette(); closeModal(); }
+        });
+
+        /* ---------- Tabs ---------- */
         function opentab(tabname, event) {
-            event.preventDefault(); // Prevents the link from navigating to the top
-            var tablinks = document.getElementsByClassName("tab-links");
-            var tabcontents = document.getElementsByClassName("tab-contents");
-            for (let tablink of tablinks) {
-                tablink.classList.remove("active-link");
+            event.preventDefault();
+            document.querySelectorAll('.tab-links').forEach(el => { el.classList.remove('active-link'); el.setAttribute('aria-selected', 'false'); });
+            document.querySelectorAll('.tab-contents').forEach(el => el.classList.remove('active-tab'));
+            event.currentTarget.classList.add('active-link');
+            event.currentTarget.setAttribute('aria-selected', 'true');
+            document.getElementById(tabname).classList.add('active-tab');
+        }
+
+        /* ---------- Certificate modal ---------- */
+        let modalLastFocused = null;
+        function openModal(src) {
+            const modal = document.getElementById('certModal');
+            const modalImg = document.getElementById('modalImg');
+            const modalPdf = document.getElementById('modalPdf');
+            modalLastFocused = document.activeElement;
+            modal.style.display = 'flex';
+            modal.setAttribute('aria-hidden', 'false');
+            document.body.style.overflow = 'hidden';
+            if (src.toLowerCase().endsWith('.pdf')) {
+                modalImg.style.display = 'none';
+                modalPdf.style.display = 'block';
+                modalPdf.src = src;
+            } else {
+                modalPdf.style.display = 'none';
+                modalImg.style.display = 'block';
+                modalImg.src = src;
             }
-            for (let tabcontent of tabcontents) {
-                tabcontent.classList.remove("active-tab");
+            modal.querySelector('.close').focus();
+        }
+        function closeModal() {
+            const modal = document.getElementById('certModal');
+            if (modal.style.display === 'none' || !modal.style.display) return;
+            modal.style.display = 'none';
+            modal.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = '';
+            if (modalLastFocused) modalLastFocused.focus();
+        }
+
+        /* ---------- Contact form ---------- */
+        const form = document.querySelector('[data-form]');
+        const formInputs = document.querySelectorAll('[data-form-input]');
+        const formBtn = document.querySelector('[data-form-btn]');
+        const checkInputs = () => {
+            const allValid = Array.from(formInputs).every(input => input.value.trim() !== '');
+            formBtn.disabled = !allValid;
+        };
+        formInputs.forEach(input => input.addEventListener('input', checkInputs));
+        form.addEventListener('submit', (e) => {
+            if (form.action.includes('your-form-id')) {
+                e.preventDefault();
+                showToast('Add your Formspree endpoint in the HTML to enable this form.');
+                return;
             }
-            event.currentTarget.classList.add("active-link");
-            document.getElementById(tabname).classList.add("active-tab");
-        }
-
-    function openModal(src) {
-        var modal = document.getElementById("certModal");
-        var modalImg = document.getElementById("modalImg");
-        var modalPdf = document.getElementById("modalPdf");
-        modal.style.display = "block";
-        if (src.toLowerCase().endsWith('.pdf')) {
-            modalImg.style.display = "none";
-            modalPdf.style.display = "block";
-            modalPdf.src = src;
-        } else {
-            modalPdf.style.display = "none";
-            modalImg.style.display = "block";
-            modalImg.src = src;
-        }
-    }
-
-    function closeModal() {
-        var modal = document.getElementById("certModal");
-        modal.style.display = "none";
-    }
-
-    // Contact form variables
-    const form = document.querySelector("[data-form]");
-    const formInputs = document.querySelectorAll("[data-form-input]");
-    const formBtn = document.querySelector("[data-form-btn]");
-    const sidebarBtn = document.querySelector("[data-sidebar-btn]");
-    const sidebarMore = document.querySelector(".sidebar-info_more");
-
-    let allInputsValid = false;
-
-    const checkInputs = () => {
-        allInputsValid = Array.from(formInputs).every(input => input.value.trim() !== '');
-        formBtn.disabled = !allInputsValid;
-    };
-
-    formInputs.forEach(input => {
-        input.addEventListener('input', checkInputs);
-    });
-
-    // Toggle sidebar contacts
-    sidebarBtn.addEventListener('click', () => {
-        const isOpen = sidebarMore.style.display === 'block';
-        sidebarMore.style.display = isOpen ? 'none' : 'block';
-        sidebarBtn.querySelector('ion-icon').style.transform = isOpen ? 'rotate(0deg)' : 'rotate(180deg)';
-    });
-
-    // Form submission (placeholder - replace with actual handling)
-    form.addEventListener('submit', (e) => {
-        e.preventDefault();
-        alert('Message sent! (This is a placeholder - integrate with a backend service like EmailJS or Formspree)');
-        form.reset();
-        checkInputs();
-    });
-
-    // Back-to-Top Button Functionality
-    const backToTopBtn = document.getElementById('backToTop');
-    window.addEventListener('scroll', () => {
-        if (window.pageYOffset > 300) {
-            backToTopBtn.style.display = 'inline-block';
-        } else {
-            backToTopBtn.style.display = 'none';
-        }
-    });
-
-    backToTopBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
+            showToast('Sending your message…');
         });
-    });
 
-    // Hamburger Menu Toggle
-    const hamburger = document.querySelector('.hamburger');
-    const navLinks = document.querySelector('.nav-links');
-
-    hamburger.addEventListener('click', () => {
-        navLinks.classList.toggle('active'); // Show/hide menu
-        hamburger.classList.toggle('open'); // Animate hamburger
-    });
-
-    // Close menu when clicking outside or on a link (optional for better UX)
-    document.addEventListener('click', (e) => {
-        if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
-            navLinks.classList.remove('active');
-            hamburger.classList.remove('open');
-        }
-    });
-
-    // Close menu on link click (for mobile)
-    navLinks.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
-            navLinks.classList.remove('active');
-            hamburger.classList.remove('open');
+        /* ---------- Back-to-top ---------- */
+        const backToTopBtn = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            backToTopBtn.style.opacity = window.pageYOffset > 300 ? '1' : '0';
+            backToTopBtn.style.pointerEvents = window.pageYOffset > 300 ? 'auto' : 'none';
         });
-    });
 
+        /* ---------- Hamburger menu ---------- */
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        hamburger.addEventListener('click', () => {
+            const isOpen = navLinks.classList.toggle('active');
+            hamburger.classList.toggle('open');
+            hamburger.setAttribute('aria-expanded', isOpen);
+        });
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                hamburger.classList.remove('open');
+                hamburger.setAttribute('aria-expanded', 'false');
+            });
+        });
+        document.addEventListener('click', (e) => {
+            if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
+                navLinks.classList.remove('active');
+                hamburger.classList.remove('open');
+                hamburger.setAttribute('aria-expanded', 'false');
+            }
+        });
+
+        /* ---------- Nav shadow on scroll ---------- */
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            navbar.classList.toggle('scrolled', window.scrollY > 10);
+        });
+
+        /* ---------- Section rail scrollspy ---------- */
+        const railDots = document.querySelectorAll('.rail-dot');
+        const sections = [...railDots].map(dot => document.getElementById(dot.dataset.target)).filter(Boolean);
+        const setActiveRail = (id) => railDots.forEach(dot => dot.classList.toggle('active', dot.dataset.target === id));
+        if ('IntersectionObserver' in window) {
+            const railObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => { if (entry.isIntersecting) setActiveRail(entry.target.id); });
+            }, { rootMargin: '-45% 0px -45% 0px', threshold: 0 });
+            sections.forEach(sec => railObserver.observe(sec));
+
+            /* ---------- Scroll reveal ---------- */
+            const revealObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('in-view');
+                        revealObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.12 });
+            document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+        } else {
+            document.querySelectorAll('.reveal').forEach(el => el.classList.add('in-view'));
+        }
     </script>
 </body>
 </html>
