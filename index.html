@@ -74,7 +74,7 @@
                 <li data-href="mailto:bringinoroiandrey1@gmail.com"><i class="fa-regular fa-paper-plane" aria-hidden="true"></i> Email Roi</li>
                 <li data-href="https://github.com/brigz18" data-external="true"><i class="fa-brands fa-github" aria-hidden="true"></i> Open GitHub</li>
                 <li data-href="https://www.linkedin.com/in/roi-andrey-bringino-247b9a363" data-external="true"><i class="fa-brands fa-linkedin" aria-hidden="true"></i> Open LinkedIn</li>
-                <li data-modal="resume.pdf"><i class="fa-solid fa-file-lines" aria-hidden="true"></i> View Résumé</li>
+                <li data-href="resume.pdf" data-download="true"><i class="fa-solid fa-file-arrow-down" aria-hidden="true"></i> Download Résumé</li>
             </ul>
         </div>
     </div>
@@ -106,7 +106,7 @@
                         <i class="fa-solid fa-sun" aria-hidden="true"></i>
                         <i class="fa-solid fa-moon" aria-hidden="true"></i>
                     </button>
-                    <a href="https://1drv.ms/w/c/d3f9227c3eb45d9c/IQBwsQ-KGEW6TK3dkt87UpIsATiXTTnXtOinc4oWU5ND4-E?e=GzZVnA" class="btn-resume" target="_blank" rel="noopener">Résumé</a>
+                    <a href="resume.pdf" download="Roi_Andrey_Bringino_Resume.pdf" class="btn-resume">Résumé</a>
                 </div>
 
                 <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navLinksList">
@@ -225,7 +225,7 @@
                     <div class="bento-cell bento-focus">
                         <p class="bento-label">Currently</p>
                         <ul class="bento-tags">
-                            <li>Open to any-level roles</li>
+                            <li>Open to junior roles</li>
                             <li>Sharpening application security</li>
                         </ul>
                     </div>
@@ -233,7 +233,7 @@
                     <div class="bento-cell bento-degree">
                         <p class="bento-label">Education</p>
                         <p class="bento-mid">BS Information Technology</p>
-                        <p class="bento-sub">Mary the Queen College of Quezon City · Graduated 2027</p>
+                        <p class="bento-sub">Mary the Queen College of Quezon City · Expected 2027</p>
                     </div>
                 </div>
 
@@ -246,12 +246,12 @@
 
                     <div class="tab-contents active-tab" id="education" role="tabpanel" aria-labelledby="tab-education">
                         <ul>
-                            <li><span class="tab-year">2027</span> Mary the Queen College of Quezon City — BS Information Technology <em>Graduated</em></li>
+                            <li><span class="tab-year">2027</span> Mary the Queen College of Quezon City — BS Information Technology <em>Expected</em></li>
                         </ul>
                     </div>
                     <div class="tab-contents" id="experience" role="tabpanel" aria-labelledby="tab-experience">
                         <ul>
-                            <li>Capstone project — Web-Based Point of Sale and Inventory Management System</li>
+                            <li>Capstone project — SmartPOS, a Cloud-Based Point of Sale and Business Management System</li>
                             <li>Network troubleshooting &amp; CCNA coursework</li>
                             <li>TESDA / Mindbank Training &amp; Skills Corp. — Computer System Servicing NC II</li>
                             <li>TESDA / Mindbank Training &amp; Skills Corp. — Contact Center Services NC II</li>
@@ -280,7 +280,7 @@
                             <div class="skill-item"><i class="fa-solid fa-code" aria-hidden="true"></i><span>Full-Stack Development</span></div>
                             <div class="skill-item"><i class="fa-brands fa-python" aria-hidden="true"></i><span>Python</span></div>
                             <div class="skill-item"><i class="fa-brands fa-java" aria-hidden="true"></i><span>Java</span></div>
-                            <div class="skill-item"><i class="fa-solid fa-database" aria-hidden="true"></i><span>Databases</span></div>
+                            <div class="skill-item"><i class="fa-solid fa-database" aria-hidden="true"></i><span>MongoDB &amp; MySQL</span></div>
                         </div>
                     </div>
 
@@ -398,8 +398,8 @@
                     </article>
                     <article class="project">
                         <p class="project-tag">Capstone</p>
-                        <h3>PoS</h3>
-                        <p>Web-Based Point of Sale and Inventory Management System, built as a capstone project.</p>
+                        <h3>SmartPOS</h3>
+                        <p>Cloud-based point of sale and business management system with role-based access control, built with Node.js, Express, MongoDB and Mongoose. 69/69 UI tests and 49 API and security checks passing.</p>
                         <a href="https://github.com/brigz18" target="_blank" rel="noopener">View Project <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
                     </article>
                     <article class="project">
@@ -529,7 +529,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Roi Andrey Bringino. All rights reserved.</p>
+                <p>&copy; 2026 Roi Andrey Bringino. All rights reserved.</p>
                 <a href="#hero" class="back-to-top" id="backToTop"><i class="fa-solid fa-arrow-up" aria-hidden="true"></i> Back to Top</a>
             </div>
         </div>
@@ -592,6 +592,17 @@
         updateClocks();
         setInterval(updateClocks, 1000);
 
+        /* ---------- Résumé download ---------- */
+        function downloadResume(href) {
+            const a = document.createElement('a');
+            a.href = href;
+            a.download = 'Roi_Andrey_Bringino_Resume.pdf';
+            document.body.appendChild(a);
+            a.click();
+            a.remove();
+            showToast('Downloading résumé…');
+        }
+
         /* ---------- Command palette ---------- */
         const cmdkBackdrop = document.getElementById('cmdkBackdrop');
         const cmdkInput = document.getElementById('cmdkInput');
@@ -625,8 +636,14 @@
             li.addEventListener('click', () => {
                 const href = li.dataset.href;
                 closePalette();
+                if (li.dataset.download) {
+                    downloadResume(href);
+                    return;
+                }
                 if (li.dataset.external) {
                     window.open(href, '_blank', 'noopener');
+                } else if (href.startsWith('mailto:')) {
+                    window.location.href = href;
                 } else {
                     window.location.hash = href.replace('#', '');
                     document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' });
